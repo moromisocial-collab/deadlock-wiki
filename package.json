@@ -1,0 +1,23 @@
+{
+  "name": "deadlock-wiki",
+  "private": true,
+  "type": "module",
+  "description": "Deadlock 日本語データベース型リファレンス + ビルドツール",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "parse": "node --experimental-strip-types src/parsers/main.ts",
+    "typecheck": "tsc --noEmit",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "astro": "^7.3.1"
+  }
+}

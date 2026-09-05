@@ -1,0 +1,105 @@
+---
+import Base from "../layouts/Base.astro";
+import { heroesFile, itemsFile, abilitiesFile, releasedHeroes, shopItems } from "../lib/data.ts";
+
+const heroCount = releasedHeroes().length;
+const itemCount = shopItems().length;
+const abilityCount = Object.keys(abilitiesFile.abilities).length;
+const commit = heroesFile.upstreamCommit;
+const generated = new Date(itemsFile.generatedAt).toLocaleDateString("ja-JP", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+const repo = "https://github.com/moromisocial-collab/deadlock-wiki";
+---
+
+<Base title="このサイトについて" description="Deadlock 日本語リファレンスの出典と権利表示">
+  <h1>このサイトについて</h1>
+
+  <p class="lead">
+    Valve の『Deadlock』のヒーロー・アイテム・スキルの数値を、日本語で引けるようにした
+    非公式のデータベースです。攻略の解説や考察は載せず、ゲームの生データをそのまま並べています。
+  </p>
+
+  <h2>権利表示</h2>
+  <p>
+    <strong>本サイトはファンが個人で作っている非公式サイトです。</strong>
+    Valve Corporation とは一切関係がなく、許諾も受けていません。
+  </p>
+  <p>
+    『Deadlock』および本サイトが表示するゲーム内のデータ・画像・テキストの著作権は、
+    <strong>Valve Corporation</strong> に帰属します。
+    Deadlock、Steam、Valve は Valve Corporation の商標または登録商標です。
+  </p>
+  <p>
+    日本語の表記はゲーム本体に収録されている公式のものをそのまま用いており、
+    当サイトが独自に翻訳・改変したものではありません。
+  </p>
+  <p>
+    権利者からご連絡をいただいた場合は、速やかに該当箇所を削除または修正します。
+  </p>
+
+  <h2>数値の出どころ</h2>
+  <p>
+    数値は人手で書き写しておらず、すべてパーサーが自動で取り出しています。
+    どのフィールドをどう解釈したかは、リポジトリの <code>architecture.html</code> に記録してあります。
+  </p>
+  <ul class="src">
+    <li>
+      <span class="k">ヒーロー・アイテム・スキルの数値</span>
+      <span class="v">
+        <a href="https://github.com/SteamDatabase/GameTracking-Deadlock" rel="noopener">
+          GameTracking-Deadlock
+        </a>
+        の <code>.vdata</code>
+      </span>
+    </li>
+    <li>
+      <span class="k">日本語の表示テキスト</span>
+      <span class="v">ゲーム本体の公式ローカライズ（<code>citadel_*_japanese.txt</code>）</span>
+    </li>
+    <li>
+      <span class="k">アイコン画像</span>
+      <span class="v">ゲーム本体の VPK から抽出</span>
+    </li>
+  </ul>
+
+  <h2>現在のデータ</h2>
+  <ul class="src">
+    <li><span class="k">実装済みヒーロー</span><span class="v">{heroCount} 体</span></li>
+    <li><span class="k">ショップ掲載アイテム</span><span class="v">{itemCount} 件</span></li>
+    <li><span class="k">スキル</span><span class="v">{abilityCount} 件</span></li>
+    <li><span class="k">抽出元コミット</span><span class="v"><code>{commit.slice(0, 12)}</code></span></li>
+    <li><span class="k">生成日</span><span class="v">{generated}</span></li>
+  </ul>
+
+  <h2>ソースコード</h2>
+  <p>
+    <a href={repo} rel="noopener">{repo}</a>
+  </p>
+  <p class="note">
+    ソースコード（<code>src/</code>、<code>tools/</code>、設定ファイル）は MIT ライセンスです。
+    これはコードにのみ及ぶもので、<code>data/</code> と <code>public/images/</code> の
+    ゲーム由来のデータ・画像は対象外です。
+  </p>
+
+  <style>
+    .lead { color: var(--c-text-muted); max-width: 62ch; }
+    p { max-width: 62ch; line-height: 1.8; }
+    .note { font-size: 13px; color: var(--c-text-muted); }
+    .src { list-style: none; padding: 0; margin: 0; max-width: 62ch; }
+    .src li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--sp-4);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--c-border);
+      font-size: 13px;
+    }
+    .src .k { color: var(--c-text-muted); }
+    .src .v { text-align: right; }
+    code { font-family: var(--font-mono); font-size: 0.92em; }
+  </style>
+</Base>

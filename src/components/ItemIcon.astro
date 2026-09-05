@@ -1,0 +1,138 @@
+---
+/**
+ * アイテムアイコン。
+ *
+ * public/images/... に実画像があればそれを表示し、無ければ同じ寸法の
+ * プレースホルダを描く。ゲーム本体から画像を抽出したら、ファイルを置くだけで
+ * 自動的に実画像に切り替わる。呼び出し側は変更不要。
+ */
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { resolveImagePath } from "../parsers/image-manifest.ts";
+import { SLOT_META } from "../lib/data.ts";
+import type { ItemSlotType } from "../types/hero.ts";
+
+interface Props {
+  name: string;
+  slotType: ItemSlotType | null;
+  tier: number;
+  shopIcon: string | null;
+  /** アイコンの一辺(px) */
+  size?: number;
+  activation?: string;
+  isImbue?: boolean;
+}
+const { name, slotType, tier, shopIcon, size = 52, activation = "PASSIVE", isImbue = false } =
+  Astro.props;
+
+const cssVar = slotType ? SLOT_META[slotType].cssVar : "accent";
+
+// 実画像の有無をビルド時に判定する
+let src: string | null = null;
+if (shopIcon) {
+  const resolved = resolveImagePath(shopIcon);
+  if (resolved && existsSync(join(process.cwd(), resolved.outPath))) {
+    src = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${resolved.outPath.replace(/^public\//, "")}`;
+  }
+}
+
+/** プレースホルダ用の頭文字。"Extended Magazine" → "EM" */
+const initials = name
+  .split(/[\s'-]+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((w) => w[0]?.toUpperCase() ?? "")
+  .join("");
+
+const badge = isImbue ? "IMBUE" : activation !== "PASSIVE" ? "ACTIVE" : null;
+
+/** ゲーム内カードと同じローマ数字表記。ティア4は IIII ではなく IV */
+const ROMAN = ["", "I", "II", "III", "IV", "V"];
+const tierLabel = ROMAN[tier] ?? String(tier);
+---
+
+<span
+  class="icon"
+  style={`--cat: var(--c-${cssVar}); --cat-bg: var(--c-${cssVar}-bg); --size: ${size}px`}
+  title={name}
+>
+  {
+    src ? (
+      <img src={src} alt="" width={size} height={size} loading="lazy" />
+    ) : (
+      <span class="ph" aria-hidden="true">
+        {initials}
+      </span>
+    )
+  }
+  <span class="tier">{tierLabel}</span>
+  {badge && <span class="badge">{badge}</span>}
+</span>
+
+<style>
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    flex: 0 0 auto;
+    border-radius: 5px;
+    border: 1px solid var(--cat);
+    background: var(--cat-bg);
+    overflow: hidden;
+    line-height: 0;
+  }
+  .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 実画像が入るまでのプレースホルダ。寸法と枠は本番と同じ */
+  .ph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: calc(var(--size) * 0.34);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: var(--cat);
+    background:
+      repeating-linear-gradient(
+        135deg,
+        transparent 0 6px,
+        rgb(255 255 255 / 0.02) 6px 12px
+      ),
+      var(--c-surface-2);
+  }
+  /* 右上のティア表記。ゲーム内のカードに合わせる */
+  .tier {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 3px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    line-height: 13px;
+    letter-spacing: -0.5px;
+    color: var(--c-bg);
+    background: var(--cat);
+    border-bottom-left-radius: 4px;
+  }
+  .badge {
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    padding: 0 3px;
+    font-size: 7px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: var(--c-text-strong);
+    background: rgb(0 0 0 / 0.65);
+    border-radius: 2px;
+  }
+</style>

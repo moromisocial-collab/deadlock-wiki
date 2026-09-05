@@ -1,0 +1,692 @@
+---
+import Base from "../../layouts/Base.astro";
+import ItemIcon from "../../components/ItemIcon.astro";
+import {
+  releasedHeroes,
+  shopItems,
+  t,
+  describe,
+  itemsFile,
+  SLOT_META,
+  modifierLabel,
+  souls,
+  localization,
+} from "../../lib/data.ts";
+import { COST_BONUS_TARGET, type ItemSlotType } from "../../types/hero.ts";
+
+const heroes = releasedHeroes();
+const items = shopItems();
+const slots = ["WeaponMod", "Armor", "Tech"] as const;
+const tiers = [1, 2, 3, 4];
+
+/** クライアント側に渡す最小限のデータ */
+const payload = {
+  heroes: heroes.map((h) => ({
+    id: h.id,
+    name: t(h.nameToken, h.key),
+    levels: h.levels.map((l) => ({ level: l.level, requiredGold: l.requiredGold })),
+    // 購入ボーナスは「カテゴリへの累計投資額」で決まる階段関数。
+    // 旧 purchaseBonuses(アイテム個別のティア加算)は誤りだったので渡さない。
+    costBonuses: h.costBonuses,
+    startingStats: h.startingStats,
+  })),
+  items: Object.fromEntries(
+    items.map((i) => [
+      i.id,
+      {
+        name: t(i.nameToken, i.id),
+        tier: i.tier,
+        slot: i.slotType,
+        cost: i.cost,
+        // 常時パッシブだけを合算対象にする。条件付き効果は含めない。
+        mods: i.passiveProperties
+          .map((n) => i.properties[n])
+          .filter((p) => p?.providedType && p.value !== null)
+          .map((p) => ({ type: p!.providedType!, value: p!.value! })),
+      },
+    ]),
+  ),
+  // 画面に出る可能性のある MODIFIER_VALUE_* をすべて解決しておく
+  labels: Object.fromEntries(
+    [
+      ...new Set([
+        ...items.flatMap((i) =>
+          i.passiveProperties.map((n) => i.properties[n]?.providedType).filter(Boolean),
+        ),
+        ...Object.values(COST_BONUS_TARGET).map((c) => c.valueType),
+      ]),
+    ].map((type) => [type, modifierLabel(type as string)]),
+  ),
+  prices: itemsFile.itemPricePerTier,
+  /** カテゴリ購入ボーナスの適用先(2026-09-05 実測で確定) */
+  costBonusTarget: COST_BONUS_TARGET,
+};
+---
+
+<Base title="ビルドシミュレーター" description="アイテムを選んでビルドを組み、URLで共有する">
+  <div class="head">
+    <h1>ビルドシミュレーター</h1>
+    <label class="heropick">
+      ヒーロー
+      <select id="hero">
+        <option value="">選択してください</option>
+        {heroes.map((h) => <option value={h.id}>{t(h.nameToken, h.key)}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <div class="layout">
+    <section class="shop">
+      <div class="tabs" role="tablist">
+        <button class="tab current" data-slot="all">すべて</button>
+        {
+          slots.map((s) => (
+            <button class="tab" data-slot={s} style={`--cat: var(--c-${SLOT_META[s].cssVar})`}>
+              {SLOT_META[s].label}
+            </button>
+          ))
+        }
+      </div>
+
+      {
+        slots.map((slot) => {
+          const meta = SLOT_META[slot];
+          return (
+            <div
+              class="cat"
+              data-slot={slot}
+              style={`--cat: var(--c-${meta.cssVar}); --cat-bg: var(--c-${meta.cssVar}-bg)`}
+            >
+              <h2 class="catname">{meta.label}</h2>
+              {tiers.map((tier) => {
+                const rows = items.filter((i) => i.slotType === slot && i.tier === tier);
+                if (rows.length === 0) return null;
+                return (
+                  <div class="tier">
+                    <h3>
+                      ティア{tier}
+                      <span class="price">{souls(itemsFile.itemPricePerTier[tier] ?? 0)}</span>
+                    </h3>
+                    <div class="grid">
+                      {rows.map((i) => (
+                        <button
+                          class="card"
+                          data-id={i.id}
+                          title={describe(i.descToken, i.properties)}
+                        >
+                          <ItemIcon
+                            name={t(i.nameToken, i.id)}
+                            slotType={i.slotType}
+                            tier={i.tier}
+                            shopIcon={i.shopIcon}
+                            activation={i.activation}
+                            isImbue={i.isImbue}
+                          />
+                          <span class="cname">{t(i.nameToken, i.id)}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })
+      }
+    </section>
+
+    <aside class="panel">
+      <div class="sticky">
+        <h2 class="phead">ビルド</h2>
+
+        <ul class="totals">
+          <li><span class="l">累計ソウル</span><span class="v" id="t-souls">0</span></li>
+          <li><span class="l">レベル</span><span class="v" id="t-level">—</span></li>
+          <li><span class="l">アイテム</span><span class="v" id="t-count">0</span></li>
+        </ul>
+
+        <div class="picked" id="picked">
+          <p class="empty">アイテムを選ぶとここに並びます。</p>
+        </div>
+
+        <h3 class="shead">TYPE別</h3>
+        <ul class="bycat" id="bycat"></ul>
+
+        <h3 class="shead">購入ボーナス</h3>
+        <p class="caveat">
+          そのTYPEに使った累計ソウルだけで決まります（アイテムの個数・ティアは無関係）。
+        </p>
+        <ul class="bycat" id="catbonus"></ul>
+
+        <h3 class="shead">合計ステータス</h3>
+        <p class="caveat">
+          常時発動のパッシブと購入ボーナスを単純加算した値です。%の合成規則（加算か乗算か）と
+          基礎ステータスへの反映は実測待ちのため、まだ最終値には変換していません。
+        </p>
+        <ul class="stats" id="stats">
+          <li class="empty">—</li>
+        </ul>
+
+        <button class="share" id="share">共有URLをコピー</button>
+        <button class="clear" id="clear">クリア</button>
+      </div>
+    </aside>
+  </div>
+
+  <script is:inline define:vars={{ payload }}>
+    // ---- 状態 -------------------------------------------------------------
+    /** 購入順を保持する。同じアイテムは1つまで。 */
+    let picked = [];
+    let heroId = null;
+
+    const ID_PREFIX = "upgrade_";
+    const shorten = (id) => (id.startsWith(ID_PREFIX) ? id.slice(ID_PREFIX.length) : "!" + id);
+    const expand = (s) => (s.startsWith("!") ? s.slice(1) : ID_PREFIX + s);
+
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n) => n.toLocaleString("en-US");
+
+    /** 累積ソウルからレベルを求める */
+    function levelForSouls(levels, spent) {
+      let current = levels.length ? levels[0].level : 1;
+      for (const l of levels) {
+        if (spent >= l.requiredGold) current = l.level;
+        else break;
+      }
+      return current;
+    }
+
+    // ---- URL --------------------------------------------------------------
+    function readUrl() {
+      const p = new URLSearchParams(location.hash.replace(/^#/, ""));
+      const h = p.get("h");
+      heroId = h && /^\d+$/.test(h) ? Number(h) : null;
+      const i = p.get("i");
+      const known = payload.items;
+      picked = i ? i.split(",").filter(Boolean).map(expand).filter((id) => known[id]) : [];
+    }
+
+    function writeUrl(replace) {
+      const parts = [];
+      if (heroId !== null) parts.push("h=" + heroId);
+      if (picked.length) parts.push("i=" + picked.map(shorten).join(","));
+      const hash = parts.length ? "#" + parts.join("&") : "";
+      const url = location.pathname + location.search + hash;
+      if (replace) history.replaceState(null, "", url);
+      else history.pushState(null, "", url);
+    }
+
+    // ---- 描画 -------------------------------------------------------------
+    function hero() {
+      return payload.heroes.find((h) => h.id === heroId) ?? null;
+    }
+
+    function render() {
+      const spent = picked.reduce((a, id) => a + (payload.items[id]?.cost ?? 0), 0);
+      $("t-souls").textContent = fmt(spent);
+      $("t-count").textContent = String(picked.length);
+      const h = hero();
+      $("t-level").textContent = h ? "Lv" + levelForSouls(h.levels, spent) : "—";
+
+      // 選んだアイコンの一覧。ショップ側のアイコンを複製して使う
+      const box = $("picked");
+      box.innerHTML = "";
+      if (picked.length === 0) {
+        const p = document.createElement("p");
+        p.className = "empty";
+        p.textContent = "アイテムを選ぶとここに並びます。";
+        box.append(p);
+      } else {
+        picked.forEach((id, index) => {
+          const source = document.querySelector(`.card[data-id="${CSS.escape(id)}"] .icon`);
+          const item = payload.items[id];
+          const cell = document.createElement("button");
+          cell.className = "pick";
+          cell.title = item.name + " — クリックで外す";
+          cell.dataset.id = id;
+          if (source) cell.append(source.cloneNode(true));
+          const order = document.createElement("span");
+          order.className = "order";
+          order.textContent = String(index + 1);
+          cell.append(order);
+          box.append(cell);
+        });
+      }
+
+      // TYPE別の内訳
+      const byCat = { WeaponMod: 0, Armor: 0, Tech: 0 };
+      const catCost = { WeaponMod: 0, Armor: 0, Tech: 0 };
+      for (const id of picked) {
+        const it = payload.items[id];
+        if (it && it.slot in byCat) {
+          byCat[it.slot]++;
+          catCost[it.slot] += it.cost;
+        }
+      }
+      const catLabel = { WeaponMod: "武器", Armor: "生命力", Tech: "スピリット" };
+      const catVar = { WeaponMod: "weapon", Armor: "vitality", Tech: "spirit" };
+      $("bycat").innerHTML = Object.keys(byCat)
+        .map(
+          (k) =>
+            `<li style="--cat: var(--c-${catVar[k]})"><span class="l">${catLabel[k]}</span>` +
+            `<span class="v">${byCat[k]}<small> 個 / ${fmt(catCost[k])}</small></span></li>`,
+        )
+        .join("");
+
+      renderCatBonus(catCost);
+      renderStats(catCost);
+    }
+
+    /**
+     * カテゴリへの累計投資額に対応する段を返す。
+     * 「投資額以下で最大の goldThreshold」を引く。中間値の補間はしない。
+     */
+    function costBonusStep(slot, invested) {
+      const h = hero();
+      const table = h?.costBonuses?.[slot];
+      if (!table || table.length === 0) return null;
+      let step = null;
+      for (const row of table) {
+        if (invested >= row.goldThreshold) step = row;
+        else break;
+      }
+      return step;
+    }
+
+    /** TYPE別の内訳の下に、今かかっている購入ボーナスの段を出す */
+    function renderCatBonus(catCost) {
+      const el = $("catbonus");
+      const h = hero();
+      if (!h) {
+        el.innerHTML = '<li class="empty">ヒーロー未選択</li>';
+        return;
+      }
+      const catLabel = { WeaponMod: "武器", Armor: "生命力", Tech: "スピリット" };
+      const catVar = { WeaponMod: "weapon", Armor: "vitality", Tech: "spirit" };
+      el.innerHTML = Object.keys(catLabel)
+        .map((slot) => {
+          const step = costBonusStep(slot, catCost[slot] ?? 0);
+          const target = payload.costBonusTarget[slot];
+          const shown = step
+            ? (target.kind === "percent" ? "+" + step.bonus + "%" : "+" + step.bonus)
+            : "—";
+          const at = step ? `<small> / ${fmt(step.goldThreshold)}到達</small>` : "";
+          return (
+            `<li style="--cat: var(--c-${catVar[slot]})"><span class="l">${catLabel[slot]}</span>` +
+            `<span class="v">${shown}${at}</span></li>`
+          );
+        })
+        .join("");
+    }
+
+    /** 常時パッシブの加算値と、カテゴリ別の購入ボーナスを合算する */
+    function renderStats(catCost) {
+      const total = new Map();
+      const add = (type, value) => total.set(type, (total.get(type) ?? 0) + value);
+
+      for (const id of picked) {
+        for (const m of payload.items[id]?.mods ?? []) add(m.type, m.value);
+      }
+
+      // 購入ボーナスはアイテム単位ではなく、カテゴリへの累計投資額から1回だけ引く
+      for (const slot of Object.keys(payload.costBonusTarget)) {
+        const step = costBonusStep(slot, catCost[slot] ?? 0);
+        if (step) add(payload.costBonusTarget[slot].valueType, step.bonus);
+      }
+
+      const rows = [...total.entries()]
+        .filter(([, v]) => v !== 0)
+        .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
+
+      const el = $("stats");
+      if (rows.length === 0) {
+        el.innerHTML = '<li class="empty">—</li>';
+        return;
+      }
+      el.innerHTML = rows
+        .map(([type, value]) => {
+          const label = payload.labels[type] ?? type.replace("MODIFIER_VALUE_", "");
+          const sign = value > 0 ? "+" : "";
+          return `<li><span class="l">${label}</span><span class="v">${sign}${Math.round(value * 100) / 100}</span></li>`;
+        })
+        .join("");
+    }
+
+    function syncCards() {
+      document.querySelectorAll(".card").forEach((c) => {
+        c.classList.toggle("on", picked.includes(c.dataset.id));
+      });
+      const sel = $("hero");
+      sel.value = heroId === null ? "" : String(heroId);
+    }
+
+    function refresh(replaceUrl) {
+      writeUrl(replaceUrl);
+      syncCards();
+      render();
+    }
+
+    // ---- 操作 -------------------------------------------------------------
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const id = card.dataset.id;
+        const at = picked.indexOf(id);
+        if (at >= 0) picked.splice(at, 1);
+        else picked.push(id);
+        refresh(false);
+      });
+    });
+
+    $("picked").addEventListener("click", (e) => {
+      const cell = e.target.closest(".pick");
+      if (!cell) return;
+      picked = picked.filter((id) => id !== cell.dataset.id);
+      refresh(false);
+    });
+
+    $("hero").addEventListener("change", (e) => {
+      const v = e.target.value;
+      heroId = v === "" ? null : Number(v);
+      refresh(false);
+    });
+
+    $("clear").addEventListener("click", () => {
+      picked = [];
+      refresh(false);
+    });
+
+    $("share").addEventListener("click", async () => {
+      const btn = $("share");
+      const url = location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        btn.textContent = "コピーしました";
+      } catch {
+        // クリップボードが使えない環境では選択できる形で見せる
+        btn.textContent = url;
+      }
+      setTimeout(() => (btn.textContent = "共有URLをコピー"), 2000);
+    });
+
+    // カテゴリの絞り込み
+    document.querySelectorAll(".tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((x) => x.classList.remove("current"));
+        tab.classList.add("current");
+        const want = tab.dataset.slot;
+        document.querySelectorAll(".cat").forEach((c) => {
+          c.hidden = want !== "all" && c.dataset.slot !== want;
+        });
+      });
+    });
+
+    window.addEventListener("hashchange", () => {
+      readUrl();
+      syncCards();
+      render();
+    });
+
+    readUrl();
+    refresh(true);
+  </script>
+
+  <style>
+    .head {
+      display: flex;
+      align-items: baseline;
+      gap: var(--sp-5);
+      flex-wrap: wrap;
+    }
+    .heropick {
+      font-size: 13px;
+      color: var(--c-text-muted);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+    select {
+      background: var(--c-surface);
+      color: var(--c-text);
+      border: 1px solid var(--c-border-strong);
+      border-radius: var(--radius);
+      padding: 5px 8px;
+      font: inherit;
+      font-size: 13px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: var(--sp-5);
+      align-items: start;
+      margin-top: var(--sp-4);
+    }
+    /* --- ショップ --- */
+    .tabs {
+      display: flex;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-4);
+      flex-wrap: wrap;
+    }
+    .tab {
+      --cat: var(--c-accent);
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      color: var(--c-text-muted);
+      border-radius: var(--radius);
+      padding: 5px 12px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .tab:hover {
+      color: var(--c-text);
+      border-color: var(--c-border-strong);
+    }
+    .tab.current {
+      color: var(--cat);
+      border-color: var(--cat);
+      background: var(--c-surface-2);
+    }
+    .catname {
+      color: var(--cat);
+      border-bottom-color: var(--cat);
+      margin-top: var(--sp-5);
+    }
+    .tier h3 {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--c-text-muted);
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      margin: var(--sp-4) 0 var(--sp-2);
+    }
+    .price {
+      font-family: var(--font-mono);
+      color: var(--c-text-faint);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+      gap: var(--sp-2);
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      padding: var(--sp-2) 4px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      color: var(--c-text-muted);
+      font: inherit;
+      font-size: 11px;
+      line-height: 1.3;
+      text-align: center;
+      cursor: pointer;
+    }
+    .card:hover {
+      background: var(--cat-bg);
+      border-color: var(--cat);
+      color: var(--c-text);
+    }
+    .card.on {
+      border-color: var(--cat);
+      background: var(--cat-bg);
+      color: var(--c-text-strong);
+      box-shadow: inset 0 0 0 1px var(--cat);
+    }
+    .cname {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    /* --- ビルドパネル --- */
+    .sticky {
+      position: sticky;
+      top: 74px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-4);
+    }
+    .phead {
+      margin: 0 0 var(--sp-3);
+      font-size: 15px;
+      border-bottom: 1px solid var(--c-border);
+      padding-bottom: var(--sp-2);
+    }
+    .shead {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-text-muted);
+      margin: var(--sp-5) 0 var(--sp-2);
+    }
+    .totals,
+    .bycat,
+    .stats {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .totals li,
+    .bycat li,
+    .stats li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--sp-3);
+      padding: 3px 0;
+      font-size: 12px;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .totals .l,
+    .bycat .l,
+    .stats .l {
+      color: var(--c-text-muted);
+    }
+    .bycat li .l {
+      color: var(--cat);
+    }
+    .totals .v,
+    .bycat .v,
+    .stats .v {
+      font-family: var(--font-mono);
+      color: var(--c-text-strong);
+    }
+    .totals .v small,
+    .bycat .v small {
+      color: var(--c-text-muted);
+      font-size: 10px;
+    }
+    .stats .empty,
+    .bycat .empty,
+    .picked .empty {
+      color: var(--c-text-faint);
+      border: none;
+      font-size: 12px;
+      margin: 0;
+    }
+    /* 選んだアイコンの一覧 */
+    .picked {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: var(--sp-3) 0;
+      min-height: 56px;
+    }
+    .pick {
+      position: relative;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 0;
+    }
+    .pick:hover {
+      filter: brightness(1.25);
+    }
+    .pick .order {
+      position: absolute;
+      left: -3px;
+      top: -4px;
+      min-width: 14px;
+      height: 14px;
+      padding: 0 3px;
+      border-radius: 7px;
+      background: var(--c-bg);
+      border: 1px solid var(--c-border-strong);
+      color: var(--c-text-muted);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      line-height: 13px;
+      text-align: center;
+    }
+    .caveat {
+      font-size: 11px;
+      color: var(--c-text-faint);
+      line-height: 1.5;
+      margin: 0 0 var(--sp-2);
+    }
+    .share,
+    .clear {
+      width: 100%;
+      margin-top: var(--sp-3);
+      padding: 7px;
+      border-radius: var(--radius);
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .share {
+      background: var(--c-accent-bg);
+      border: 1px solid var(--c-accent-dim);
+      color: var(--c-accent);
+    }
+    .share:hover {
+      background: var(--c-accent-bg-strong);
+      color: var(--c-accent-hover);
+    }
+    .clear {
+      background: transparent;
+      border: 1px solid var(--c-border);
+      color: var(--c-text-muted);
+      margin-top: var(--sp-2);
+    }
+    .clear:hover {
+      border-color: var(--c-border-strong);
+      color: var(--c-text);
+    }
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .sticky {
+        position: static;
+      }
+    }
+  </style>
+</Base>

@@ -1,0 +1,107 @@
+---
+import Base from "../layouts/Base.astro";
+import { releasedHeroes, shopItems, abilitiesFile, localization, heroesFile } from "../lib/data.ts";
+
+const base = import.meta.env.BASE_URL;
+const heroes = releasedHeroes();
+const items = shopItems();
+const stats = [
+  { n: heroes.length, label: "ヒーロー", href: `${base}/heroes/` },
+  { n: items.length, label: "アイテム", href: `${base}/items/` },
+  { n: Object.keys(abilitiesFile.abilities).length, label: "スキル", href: null },
+  { n: Object.keys(localization.tokens).length, label: "テキスト", href: null },
+];
+---
+
+<Base title="トップ" description="Deadlockのヒーロー・アイテム・スキルの数値を日本語で引けるデータベース">
+  <section class="hero">
+    <h1>Deadlock 日本語リファレンス</h1>
+    <p class="lead">
+      ヒーロー・アイテム・スキルの数値を日本語で引けるデータベースと、
+      ビルドの成長曲線を可視化するツール。解説や考察は載せず、ゲームの生データだけを扱います。
+    </p>
+  </section>
+
+  <ul class="stats">
+    {
+      stats.map((s) => (
+        <li>
+          {s.href ? (
+            <a href={s.href}>
+              <span class="n">{s.n}</span>
+              <span class="l">{s.label}</span>
+            </a>
+          ) : (
+            <span>
+              <span class="n">{s.n}</span>
+              <span class="l">{s.label}</span>
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>データについて</h2>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>項目</th><th>内容</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>出典</td><td>GameTracking-Deadlock（唯一のデータソース）</td></tr>
+        <tr><td>取り込みコミット</td><td><code>{heroesFile.upstreamCommit.slice(0, 12)}</code></td></tr>
+        <tr><td>更新方法</td><td>上流の新規コミットを検知して差分のみ再抽出</td></tr>
+        <tr><td>日本語化</td><td>準備中（現在は英語表記で表示しています）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    .hero {
+      padding: var(--sp-6) 0 var(--sp-5);
+    }
+    .lead {
+      max-width: 62ch;
+      color: var(--c-text-muted);
+      font-size: 15px;
+    }
+    .stats {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--sp-3);
+      margin: 0 0 var(--sp-5);
+      padding: 0;
+    }
+    .stats li > * {
+      display: block;
+      padding: var(--sp-4);
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg);
+      color: inherit;
+    }
+    .stats a:hover {
+      border-color: var(--c-accent-dim);
+      background: var(--c-surface-2);
+      text-decoration: none;
+    }
+    .n {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 26px;
+      color: var(--c-text-strong);
+      line-height: 1.2;
+    }
+    .stats a .n {
+      color: var(--c-accent);
+    }
+    .l {
+      display: block;
+      font-size: 12px;
+      color: var(--c-text-muted);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</Base>

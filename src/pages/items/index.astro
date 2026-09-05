@@ -1,0 +1,158 @@
+---
+import Base from "../../layouts/Base.astro";
+import ItemIcon from "../../components/ItemIcon.astro";
+import { shopItems, t, describe, itemsFile, SLOT_META, souls } from "../../lib/data.ts";
+
+const items = shopItems();
+const slots = ["WeaponMod", "Armor", "Tech"] as const;
+const tiers = [...new Set(items.map((i) => i.tier))].sort();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Base title="アイテム一覧" description="Deadlockのショップアイテムの効果と価格">
+  <h1>アイテム</h1>
+  <p class="lead">
+    ショップ掲載 {items.length} 件。価格はティアで決まります（
+    {tiers.map((t2) => `T${t2}: ${souls(itemsFile.itemPricePerTier[t2] ?? 0)}`).join(" / ")}）。
+  </p>
+
+  <div class="search">
+    <input
+      type="search"
+      id="q"
+      placeholder="アイテム名・効果で絞り込む"
+      autocomplete="off"
+      aria-label="アイテムの絞り込み"
+    />
+    <span class="hits" id="hits"></span>
+  </div>
+
+  <div class="cols">
+    {slots.map((slot) => {
+      const meta = SLOT_META[slot];
+      const list = items.filter((i) => i.slotType === slot);
+      return (
+        <section class="col" style={`--cat: var(--c-${meta.cssVar}); --cat-bg: var(--c-${meta.cssVar}-bg)`}>
+          <h2 class="cat">{meta.label}<span class="count">{list.length}</span></h2>
+          {tiers.map((tier) => {
+            const rows = list.filter((i) => i.tier === tier);
+            if (rows.length === 0) return null;
+            return (
+              <div class="tier">
+                <h3>ティア{tier}<span class="price">{souls(itemsFile.itemPricePerTier[tier] ?? 0)}</span></h3>
+                <ul>
+                  {rows.map((i) => {
+                    const iname = t(i.nameToken, i.id);
+                    const idesc = describe(i.descToken, i.properties);
+                    return (
+                      <li data-find={`${iname} ${idesc} ${i.id}`.toLowerCase()}>
+                        <a href={`${base}/items/${i.id}/`}>
+                          <ItemIcon
+                            name={iname}
+                            slotType={i.slotType}
+                            tier={i.tier}
+                            shopIcon={i.shopIcon}
+                            activation={i.activation}
+                            isImbue={i.isImbue}
+                            size={40}
+                          />
+                          <span class="body">
+                            <span class="iname">{iname}</span>
+                            <span class="idesc">{idesc}</span>
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </section>
+      );
+    })}
+  </div>
+
+  <script is:inline>
+    // 追加ライブラリなしのクライアント側フィルタ。
+    // 各行が data-find に「名前 + 説明 + 内部ID」を小文字で持っている。
+    (() => {
+      const q = document.getElementById("q");
+      const hits = document.getElementById("hits");
+      const rows = [...document.querySelectorAll(".tier li")];
+      const total = rows.length;
+
+      function apply() {
+        const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        let shown = 0;
+        for (const li of rows) {
+          const hay = li.dataset.find;
+          const ok = words.every((w) => hay.includes(w));
+          li.hidden = !ok;
+          if (ok) shown++;
+        }
+        // 中身が全部消えたティア見出し・カテゴリ列ごと隠す
+        for (const tier of document.querySelectorAll(".tier")) {
+          tier.hidden = ![...tier.querySelectorAll("li")].some((li) => !li.hidden);
+        }
+        for (const col of document.querySelectorAll(".col")) {
+          const visible = [...col.querySelectorAll("li")].filter((li) => !li.hidden);
+          col.hidden = visible.length === 0;
+          // カテゴリ見出しの件数も絞り込みに合わせる
+          col.querySelector(".count").textContent = String(visible.length);
+        }
+        hits.textContent = words.length === 0 ? "" : `${shown} / ${total} 件`;
+      }
+
+      q.addEventListener("input", apply);
+      // ブラウザが値を復元した場合に備えて初回も走らせる
+      apply();
+    })();
+  </script>
+
+  <style>
+    .lead { color: var(--c-text-muted); margin-bottom: var(--sp-5); font-size: 13px; }
+    .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-5); }
+    .cat {
+      color: var(--cat); border-bottom-color: var(--cat);
+      display: flex; align-items: baseline; justify-content: space-between; margin-top: 0;
+    }
+    .count { font-family: var(--font-mono); font-size: 13px; color: var(--c-text-muted); }
+    .tier h3 {
+      font-size: 12px; letter-spacing: .08em; color: var(--c-text-muted); text-transform: uppercase;
+      display: flex; justify-content: space-between; margin-bottom: var(--sp-2);
+    }
+    .price { font-family: var(--font-mono); color: var(--c-text-faint); }
+    .tier ul { list-style: none; padding: 0; margin: 0 0 var(--sp-4); display: grid; gap: 3px; }
+    .tier li {
+      background: var(--c-surface); border: 1px solid var(--c-border);
+      border-left: 3px solid var(--cat); border-radius: var(--radius);
+    }
+    .tier li a {
+      display: flex; gap: var(--sp-3); align-items: flex-start;
+      padding: var(--sp-2) var(--sp-3);
+      text-decoration: none; color: inherit; border-radius: var(--radius);
+    }
+    .body { min-width: 0; }
+    .tier li:hover { background: var(--cat-bg); }
+    .tier li:hover .iname { color: var(--cat); }
+    /* 絞り込みで消える行・空になったティア/カテゴリ */
+    .tier li[hidden], .tier[hidden], .col[hidden] { display: none; }
+    .search { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-5); }
+    .search input {
+      flex: 1 1 auto; max-width: 420px;
+      background: var(--c-surface); color: var(--c-text);
+      border: 1px solid var(--c-border-strong); border-radius: var(--radius);
+      padding: 7px 10px; font: inherit; font-size: 13px;
+    }
+    .search input:focus { outline: none; border-color: var(--c-accent); }
+    .hits { font-size: 12px; color: var(--c-text-muted); font-family: var(--font-mono); }
+    .iname { font-weight: 600; color: var(--c-text-strong); font-size: 14px; }
+    .tag {
+      font-size: 10px; letter-spacing: .06em; color: var(--cat);
+      border: 1px solid var(--cat); border-radius: 3px; padding: 0 4px; margin-left: var(--sp-2);
+      vertical-align: 2px;
+    }
+    .idesc { display: block; font-size: 12px; color: var(--c-text-muted); line-height: 1.5; }
+  </style>
+</Base>

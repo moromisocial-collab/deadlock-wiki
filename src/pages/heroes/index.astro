@@ -1,0 +1,167 @@
+---
+import Base from "../../layouts/Base.astro";
+import AbilityIcon from "../../components/AbilityIcon.astro";
+import { releasedHeroes, t, ability } from "../../lib/data.ts";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const heroes = releasedHeroes().map((h) => ({
+  hero: h,
+  name: t(h.nameToken, h.key),
+  role: t(h.roleToken, ""),
+  // Signature_1〜4。4番目は全38体で kind が Ultimate だった
+  skills: h.abilities
+    .filter((a) => a.slot.startsWith("Signature"))
+    .sort((a, b) => a.slot.localeCompare(b.slot))
+    .map((a) => ({ key: a.abilityKey, ab: ability(a.abilityKey) })),
+}));
+// 複雑さは 1〜3 想定だが、データ側に範囲外の値があるためクランプする
+const cx = (n: number) => Math.max(0, Math.min(3, n));
+---
+
+<Base title="ヒーロー一覧" description="Deadlockの実装済みヒーローの基礎ステータス一覧">
+  <h1>ヒーロー</h1>
+  <p class="lead">実装済み {heroes.length} 体。数値はレベル1・アイテムなしの基礎値です。</p>
+
+  <div class="search">
+    <input
+      type="search"
+      id="q"
+      placeholder="ヒーロー名・役割で絞り込む"
+      autocomplete="off"
+      aria-label="ヒーローの絞り込み"
+    />
+    <span class="hits" id="hits"></span>
+  </div>
+
+  <ul class="grid">
+    {
+      heroes.map(({ hero: h, name, role, skills }) => (
+        <li data-find={`${name} ${role} ${h.key} ${skills.map((s) => t(s.key, "")).join(" ")}`.toLowerCase()}>
+          <a href={`${base}/heroes/${h.id}/`}>
+            <span class="name">{name}</span>
+            <span class="role">{role}</span>
+            <span class="skills">
+              {skills.map((s) => (
+                <AbilityIcon
+                  name={t(s.key, s.key)}
+                  image={s.ab?.image ?? null}
+                  size={30}
+                  cssVar={s.ab?.kind === "Ultimate" ? "spirit" : "accent"}
+                />
+              ))}
+            </span>
+            <span class="stats">
+              <span><b>{h.startingStats.EMaxHealth}</b> HP</span>
+              <span><b>{h.startingStats.EMaxMoveSpeed}</b> 速度</span>
+              <span class="cx">複雑さ {"●".repeat(cx(h.complexity))}<span class="dim">{"●".repeat(3 - cx(h.complexity))}</span></span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <script is:inline>
+    // 追加ライブラリなしのクライアント側フィルタ。
+    // 各カードが data-find に「名前 + 役割 + キー + スキル名」を小文字で持っている。
+    (() => {
+      const q = document.getElementById("q");
+      const hits = document.getElementById("hits");
+      const cards = [...document.querySelectorAll(".grid li")];
+
+      function apply() {
+        const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        let shown = 0;
+        for (const li of cards) {
+          const ok = words.every((w) => li.dataset.find.includes(w));
+          li.hidden = !ok;
+          if (ok) shown++;
+        }
+        hits.textContent = words.length === 0 ? "" : `${shown} / ${cards.length} 体`;
+      }
+      q.addEventListener("input", apply);
+      apply();
+    })();
+  </script>
+
+  <style>
+    .lead {
+      color: var(--c-text-muted);
+      margin-bottom: var(--sp-5);
+    }
+    .grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: var(--sp-3);
+    }
+    .grid a {
+      display: flex;
+      flex-direction: column;
+      padding: var(--sp-4);
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-left: 3px solid var(--c-accent-dim);
+      border-radius: var(--radius);
+      color: inherit;
+      height: 100%;
+    }
+    .grid a:hover {
+      background: var(--c-surface-2);
+      border-color: var(--c-border-strong);
+      border-left-color: var(--c-accent);
+      text-decoration: none;
+    }
+    .name {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--c-text-strong);
+    }
+    .role {
+      display: block;
+      font-size: 12px;
+      color: var(--c-text-muted);
+      margin-bottom: var(--sp-3);
+    }
+    .stats {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+      font-size: 12px;
+      color: var(--c-text-muted);
+      border-top: 1px solid var(--c-border);
+      padding-top: var(--sp-2);
+    }
+    .stats b {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      color: var(--c-text);
+    }
+    .cx {
+      color: var(--c-accent);
+      letter-spacing: 1px;
+    }
+    .cx .dim {
+      color: var(--c-text-faint);
+    }
+    .skills {
+      display: flex;
+      gap: 4px;
+      margin-bottom: var(--sp-3);
+    }
+    .grid li[hidden] { display: none; }
+    .search { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-5); }
+    .search input {
+      flex: 1 1 auto; max-width: 420px;
+      background: var(--c-surface); color: var(--c-text);
+      border: 1px solid var(--c-border-strong); border-radius: var(--radius);
+      padding: 7px 10px; font: inherit; font-size: 13px;
+    }
+    .search input:focus { outline: none; border-color: var(--c-accent); }
+    .hits { font-size: 12px; color: var(--c-text-muted); font-family: var(--font-mono); }
+  </style>
+</Base>

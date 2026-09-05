@@ -1,0 +1,3785 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-05T05:03:59.926Z",
+  "sourceVpk": "game/citadel/pak01_dir.vpk",
+  "entries": [
+    {
+      "ref": "file://{images}/hud/abilities/ability_activate.psd",
+      "vpkPath": "panorama/images/hud/abilities/ability_activate_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/ability_activate.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trigger_base",
+        "ability:citadel_ability_fissure_wall_cancel",
+        "ability:synth_plasma_flux_trigger",
+        "ability:tokamak_heat_sinks_inherent",
+        "ability:ability_wrecking_ball_throw",
+        "ability:ability_magician_cloneturret_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/ability_cancel.psd",
+      "vpkPath": "panorama/images/hud/abilities/ability_cancel_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/ability_cancel.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_catform_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/archer/archer_charged_shot.psd",
+      "vpkPath": "panorama/images/hud/abilities/archer/archer_charged_shot_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/archer/archer_charged_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_charged_shot"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/archer/archer_guided_arrow.psd",
+      "vpkPath": "panorama/images/hud/abilities/archer/archer_guided_arrow_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/archer/archer_guided_arrow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_hat_trick",
+        "ability:ability_guided_arrow"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/archer/archer_power_jump.psd",
+      "vpkPath": "panorama/images/hud/abilities/archer/archer_power_jump_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/archer/archer_power_jump.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_power_jump"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/archer/imobolize_trap.psd",
+      "vpkPath": "panorama/images/hud/abilities/archer/imobolize_trap_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/archer/imobolize_trap.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_immobilize_trap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/gravity_lasso.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/gravity_lasso_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/gravity_lasso.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tangotether_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/holliday_bounce_pad.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/holliday_bounce_pad_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/holliday_bounce_pad.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bounce_pad"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/holliday_crackshot.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/holliday_crackshot_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/holliday_crackshot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_crackshot"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/holliday_powder_keg.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/holliday_powder_keg_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/holliday_powder_keg.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_explosive_barrel"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/holliday_spirit_lasso.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/holliday_spirit_lasso_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/holliday_spirit_lasso.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_gravity_lasso"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/astro/shotgun.psd",
+      "vpkPath": "panorama/images/hud/abilities/astro/shotgun_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/astro/shotgun.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_astro_shotgun_toggle"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bebop/bebop_hook.psd",
+      "vpkPath": "panorama/images/hud/abilities/bebop/bebop_hook_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bebop/bebop_hook.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_hook"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bebop/bebop_hyper_beam.psd",
+      "vpkPath": "panorama/images/hud/abilities/bebop/bebop_hyper_beam_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bebop/bebop_hyper_beam.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_bebop_laser_beam"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bebop/bebop_sticky_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/bebop/bebop_sticky_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bebop/bebop_sticky_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_kali_trappers_bolo",
+        "ability:citadel_ability_sticky_bomb",
+        "ability:ability_bebop_stickybomb2",
+        "ability:ability_charged_bomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bebop/bebop_uppercut.psd",
+      "vpkPath": "panorama/images/hud/abilities/bebop/bebop_uppercut_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bebop/bebop_uppercut.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_uppercut"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bookworm/bookworm_blindinglight.psd",
+      "vpkPath": "panorama/images/hud/abilities/bookworm/bookworm_blindinglight_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bookworm/bookworm_blindinglight.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bookworm_aoemagic"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bookworm/bookworm_charge.psd",
+      "vpkPath": "panorama/images/hud/abilities/bookworm/bookworm_charge_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bookworm/bookworm_charge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bookworm_knightcharge"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bookworm/bookworm_defendandfight.psd",
+      "vpkPath": "panorama/images/hud/abilities/bookworm/bookworm_defendandfight_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bookworm/bookworm_defendandfight.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bookworm_knightbarrier"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bookworm/bookworm_dragon.psd",
+      "vpkPath": "panorama/images/hud/abilities/bookworm/bookworm_dragon_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bookworm/bookworm_dragon.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bookworm_dragonfire"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bull_beef.psd",
+      "vpkPath": "panorama/images/hud/abilities/bull_beef_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bull_beef.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_passive_beefy"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bull_charge.psd",
+      "vpkPath": "panorama/images/hud/abilities/bull_charge_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bull_charge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_bull_charge"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bull_drain.psd",
+      "vpkPath": "panorama/images/hud/abilities/bull_drain_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bull_drain.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_bull_heal"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/bull_jump.psd",
+      "vpkPath": "panorama/images/hud/abilities/bull_jump_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/bull_jump.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_bull_leap",
+        "ability:ability_swan_leap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/cadence/cadence_ability_1.psd",
+      "vpkPath": "panorama/images/hud/abilities/cadence/cadence_ability_1_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/cadence/cadence_ability_1.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:cadence_ability_anthem"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/cadence/cadence_ability_2.psd",
+      "vpkPath": "panorama/images/hud/abilities/cadence/cadence_ability_2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/cadence/cadence_ability_2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:cadence_ability_silencecontraptions"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/cadence/cadence_ability_3.psd",
+      "vpkPath": "panorama/images/hud/abilities/cadence/cadence_ability_3_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/cadence/cadence_ability_3.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:cadence_ability_lullaby"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/cadence/cadence_ability_4.psd",
+      "vpkPath": "panorama/images/hud/abilities/cadence/cadence_ability_4_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/cadence/cadence_ability_4.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:cadence_ability_grandfinale",
+        "ability:cadence_ability_crescendo"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/chrono/chrono_swap.psd",
+      "vpkPath": "panorama/images/hud/abilities/chrono/chrono_swap_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/chrono/chrono_swap.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_chrono_swap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/chrono/chrono_time_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/chrono/chrono_time_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/chrono/chrono_time_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_chrono_pulse_grenade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/chrono/chrono_time_wall.psd",
+      "vpkPath": "panorama/images/hud/abilities/chrono/chrono_time_wall_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/chrono/chrono_time_wall.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_chrono_time_wall"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/doorman/doorman_bell.psd",
+      "vpkPath": "panorama/images/hud/abilities/doorman/doorman_bell_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/doorman/doorman_bell.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_doorman_bomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/doorman/doorman_doorway.psd",
+      "vpkPath": "panorama/images/hud/abilities/doorman/doorman_doorway_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/doorman/doorman_doorway.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_doorman_doorway"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/doorman/doorman_doorwayclose.psd",
+      "vpkPath": "panorama/images/hud/abilities/doorman/doorman_doorwayclose_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/doorman/doorman_doorwayclose.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_doorman_doorway_close"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/doorman/doorman_elevator.psd",
+      "vpkPath": "panorama/images/hud/abilities/doorman/doorman_elevator_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/doorman/doorman_elevator.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_doorman_hotel"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/doorman/doorman_luggagetrolley.psd",
+      "vpkPath": "panorama/images/hud/abilities/doorman/doorman_luggagetrolley_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/doorman/doorman_luggagetrolley.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_doorman_luggage_cart"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/darkness.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/darkness_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/darkness.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:drifter_darkness"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/drifter_claw.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/drifter_claw_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/drifter_claw.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:drifter_blood_blast"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/drifter_stalkersmark.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/drifter_stalkersmark_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/drifter_stalkersmark.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:drifter_shadow_mark",
+        "ability:ability_werewolf_passive"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/drifter_terror.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/drifter_terror_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/drifter_terror.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_trackingbomb",
+        "ability:ability_werewolf_onthehunt"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/drifter_thehunger.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/drifter_thehunger_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/drifter_thehunger.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_drifter_hunger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/drifter/stalkers_mark_teleport.psd",
+      "vpkPath": "panorama/images/hud/abilities/drifter/stalkers_mark_teleport_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/drifter/stalkers_mark_teleport.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:drifter_shadow_mark_teleport"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/duo/duo_attack.psd",
+      "vpkPath": "panorama/images/hud/abilities/duo/duo_attack_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/duo/duo_attack.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_chrono_kinetic_carbine",
+        "ability:ability_gunslinger_demon_carbine"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/duo/duo_cancel.psd",
+      "vpkPath": "panorama/images/hud/abilities/duo/duo_cancel_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/duo/duo_cancel.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:yakuza_gang_activity_cancel"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/engineer_fissure_2_activate.psd",
+      "vpkPath": "panorama/images/hud/abilities/engineer_fissure_2_activate_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/engineer_fissure_2_activate.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_charged_bomb_throw",
+        "ability:citadel_ability_fissure_wall_trigger",
+        "ability:ability_ice_dome_trigger",
+        "ability:ability_perched_predator_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/engineer_fissure_2.psd",
+      "vpkPath": "panorama/images/hud/abilities/engineer_fissure_2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/engineer_fissure_2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_fissure_wall"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/engineer_resupply.psd",
+      "vpkPath": "panorama/images/hud/abilities/engineer_resupply_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/engineer_resupply.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_mobile_resupply"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/engineer_rockets.psd",
+      "vpkPath": "panorama/images/hud/abilities/engineer_rockets_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/engineer_rockets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:trooper_boss_grenade",
+        "ability:trooper_neutral_grenade",
+        "ability:citadel_ability_tier2boss_rocket_barrage",
+        "ability:citadel_ability_tier2boss_laser_beam",
+        "ability:citadel_ability_tier3boss_laser_beam",
+        "ability:citadel_ability_tier3boss_rocket_barrage",
+        "ability:yakuza_shakedown",
+        "ability:citadel_ability_rocket_barrage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/engineer_turret.psd",
+      "vpkPath": "panorama/images/hud/abilities/engineer_turret_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/engineer_turret.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_shieldedsentry"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/familiar/familiar_helpers.psd",
+      "vpkPath": "panorama/images/hud/abilities/familiar/familiar_helpers_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/familiar/familiar_helpers.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_familiar_helpinghands"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/familiar/familiar_pillow.psd",
+      "vpkPath": "panorama/images/hud/abilities/familiar/familiar_pillow_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/familiar/familiar_pillow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_familiar_ability02"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/familiar/familiar_sleep.psd",
+      "vpkPath": "panorama/images/hud/abilities/familiar/familiar_sleep_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/familiar/familiar_sleep.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_familiar_ability01"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/familiar/familiar_tag_along.psd",
+      "vpkPath": "panorama/images/hud/abilities/familiar/familiar_tag_along_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/familiar/familiar_tag_along.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_familiar_attach"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/familiar/familiar_tag_along2.psd",
+      "vpkPath": "panorama/images/hud/abilities/familiar/familiar_tag_along2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/familiar/familiar_tag_along2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_familiar_attach_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/fencer/fencer_lungingstab.psd",
+      "vpkPath": "panorama/images/hud/abilities/fencer/fencer_lungingstab_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/fencer/fencer_lungingstab.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fencer_lunge"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/fencer/fencer_riposte_attack.psd",
+      "vpkPath": "panorama/images/hud/abilities/fencer/fencer_riposte_attack_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/fencer/fencer_riposte_attack.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fencer_riposte_target_select"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/fencer/fencer_riposte.psd",
+      "vpkPath": "panorama/images/hud/abilities/fencer/fencer_riposte_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/fencer/fencer_riposte.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fencer_riposte"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/fencer/fencer_sigil.psd",
+      "vpkPath": "panorama/images/hud/abilities/fencer/fencer_sigil_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/fencer/fencer_sigil.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fencer_throwblade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/fencer/fencer_ult.psd",
+      "vpkPath": "panorama/images/hud/abilities/fencer/fencer_ult_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/fencer/fencer_ult.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fencer_ultimate"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/frank/frank_aura_of_suffering.psd",
+      "vpkPath": "panorama/images/hud/abilities/frank/frank_aura_of_suffering_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/frank/frank_aura_of_suffering.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_frank_painaura"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/frank/frank_jump_start.psd",
+      "vpkPath": "panorama/images/hud/abilities/frank/frank_jump_start_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/frank/frank_jump_start.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_frank_selfzap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/frank/frank_pain_battery.psd",
+      "vpkPath": "panorama/images/hud/abilities/frank/frank_pain_battery_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/frank/frank_pain_battery.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_frank_shocktarget2"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/frank/frank_shocking_reanimation.psd",
+      "vpkPath": "panorama/images/hud/abilities/frank/frank_shocking_reanimation_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/frank/frank_shocking_reanimation.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_frank_revive"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/genericperson/genericperson_ability_1.psd",
+      "vpkPath": "panorama/images/hud/abilities/genericperson/genericperson_ability_1_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/genericperson/genericperson_ability_1.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:genericperson_ability_1"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/genericperson/genericperson_ability_2.psd",
+      "vpkPath": "panorama/images/hud/abilities/genericperson/genericperson_ability_2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/genericperson/genericperson_ability_2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:genericperson_ability_2"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/genericperson/genericperson_ability_3.psd",
+      "vpkPath": "panorama/images/hud/abilities/genericperson/genericperson_ability_3_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/genericperson/genericperson_ability_3.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:genericperson_ability_3"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/genericperson/genericperson_ability_4.psd",
+      "vpkPath": "panorama/images/hud/abilities/genericperson/genericperson_ability_4_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/genericperson/genericperson_ability_4.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:genericperson_ability_4"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/giga_ball.psd",
+      "vpkPath": "panorama/images/hud/abilities/giga_ball_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/giga_ball.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_lightning_ball"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/giga_chain.psd",
+      "vpkPath": "panorama/images/hud/abilities/giga_chain_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/giga_chain.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_chain_lightning",
+        "ability:ability_power_surge"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/giga_static.psd",
+      "vpkPath": "panorama/images/hud/abilities/giga_static_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/giga_static.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_static_charge",
+        "ability:citadel_ability_static_charge_v2"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/giga_storm.psd",
+      "vpkPath": "panorama/images/hud/abilities/giga_storm_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/giga_storm.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_storm_cloud"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/grappler/grappler_combo.psd",
+      "vpkPath": "panorama/images/hud/abilities/grappler/grappler_combo_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/grappler/grappler_combo.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_ult_combo"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/grappler/grappler_regen.psd",
+      "vpkPath": "panorama/images/hud/abilities/grappler/grappler_regen_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/grappler/grappler_regen.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_intimidate"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/grappler/grappler_spin.psd",
+      "vpkPath": "panorama/images/hud/abilities/grappler/grappler_spin_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/grappler/grappler_spin.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_burrow"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/grappler/grappler_throw_sand.psd",
+      "vpkPath": "panorama/images/hud/abilities/grappler/grappler_throw_sand_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/grappler/grappler_throw_sand.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_throw_sand"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/haze/haze_bullet_flurry.psd",
+      "vpkPath": "panorama/images/hud/abilities/haze/haze_bullet_flurry_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/haze/haze_bullet_flurry.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bullet_flurry"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/haze/haze_fixation.psd",
+      "vpkPath": "panorama/images/hud/abilities/haze/haze_fixation_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/haze/haze_fixation.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_stacking_damage",
+        "ability:ability_werewolf_transformation_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/haze/haze_sleep_dagger.psd",
+      "vpkPath": "panorama/images/hud/abilities/haze/haze_sleep_dagger_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/haze/haze_sleep_dagger.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_sleep_dagger",
+        "ability:fathom_reefdweller_harpoon"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/haze/haze_smoke_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/haze/haze_smoke_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/haze/haze_smoke_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_smoke_bomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/hornet/hornet_assassinate.psd",
+      "vpkPath": "panorama/images/hud/abilities/hornet/hornet_assassinate_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/hornet/hornet_assassinate.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_astro_rifle",
+        "ability:citadel_ability_hornet_snipe",
+        "ability:gunslinger_demonMark",
+        "ability:ability_priest_barrage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/hornet/hornet_crow.psd",
+      "vpkPath": "panorama/images/hud/abilities/hornet/hornet_crow_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/hornet/hornet_crow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_hornet_sting"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/hornet/vindicta_flight.psd",
+      "vpkPath": "panorama/images/hud/abilities/hornet/vindicta_flight_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/hornet/vindicta_flight.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_hornet_leap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/hornet/vindicta_stake.psd",
+      "vpkPath": "panorama/images/hud/abilities/hornet/vindicta_stake_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/hornet/vindicta_stake.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_hornet_chain"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/inferno_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/inferno_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/inferno_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_fire_bomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/inferno_dash.psd",
+      "vpkPath": "panorama/images/hud/abilities/inferno_dash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/inferno_dash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_flame_dash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/inferno_deflect.psd",
+      "vpkPath": "panorama/images/hud/abilities/inferno_deflect_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/inferno_deflect.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_afterburn",
+        "ability:ability_haunt"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/inferno_molotov.psd",
+      "vpkPath": "panorama/images/hud/abilities/inferno_molotov_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/inferno_molotov.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_incendiary_projectile",
+        "ability:ability_empowerbullet"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/inferno_passive.psd",
+      "vpkPath": "panorama/images/hud/abilities/inferno_passive_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/inferno_passive.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_gunslinger_spreadingfire"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kali/kali_oscilloblade.psd",
+      "vpkPath": "panorama/images/hud/abilities/kali/kali_oscilloblade_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kali/kali_oscilloblade.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_kali_spinning_blade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kali/kali_speed_burst.psd",
+      "vpkPath": "panorama/images/hud/abilities/kali/kali_speed_burst_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kali/kali_speed_burst.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_kali_disruptive_charge"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kali/kali_whirling_blade.psd",
+      "vpkPath": "panorama/images/hud/abilities/kali/kali_whirling_blade_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kali/kali_whirling_blade.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_kali_dust_storm"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kelvin/freezing_grenade.psd",
+      "vpkPath": "panorama/images/hud/abilities/kelvin/freezing_grenade_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kelvin/freezing_grenade.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_ice_grenade",
+        "ability:ability_skyrunner_magic_beam"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kelvin/frozen_shelter.psd",
+      "vpkPath": "panorama/images/hud/abilities/kelvin/frozen_shelter_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kelvin/frozen_shelter.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_ice_dome",
+        "ability:ability_magician_stage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kelvin/ice_beam.psd",
+      "vpkPath": "panorama/images/hud/abilities/kelvin/ice_beam_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kelvin/ice_beam.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_icebeam"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/kelvin/ice_path.psd",
+      "vpkPath": "panorama/images/hud/abilities/kelvin/ice_path_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/kelvin/ice_path.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_icepath",
+        "ability:ability_swan_acrobat"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/lash/lash_counter_lash.psd",
+      "vpkPath": "panorama/images/hud/abilities/lash/lash_counter_lash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/lash/lash_counter_lash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_lash_ultimate"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/lash/lash_death_slam.psd",
+      "vpkPath": "panorama/images/hud/abilities/lash/lash_death_slam_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/lash/lash_death_slam.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_lash_down_strike"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/lash/lash_flog.psd",
+      "vpkPath": "panorama/images/hud/abilities/lash/lash_flog_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/lash/lash_flog.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_lash_flog",
+        "ability:ability_skyrunner_swingline"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/lash/lash_lash.psd",
+      "vpkPath": "panorama/images/hud/abilities/lash/lash_lash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/lash/lash_lash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_lash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/magician/magician_animalcurse.psd",
+      "vpkPath": "panorama/images/hud/abilities/magician/magician_animalcurse_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/magician/magician_animalcurse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_animalcurse",
+        "ability:ability_magician_animalhexarea"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/magician/magician_cloneturret.psd",
+      "vpkPath": "panorama/images/hud/abilities/magician/magician_cloneturret_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/magician/magician_cloneturret.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_cloneturret"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/magician/magician_copyult.psd",
+      "vpkPath": "panorama/images/hud/abilities/magician/magician_copyult_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/magician/magician_copyult.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_copyult"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/magician/magician_magicbolt.psd",
+      "vpkPath": "panorama/images/hud/abilities/magician/magician_magicbolt_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/magician/magician_magicbolt.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_magicbolt",
+        "ability:ability_boho_bouncyprojectile"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/melee_damage.psd",
+      "vpkPath": "panorama/images/hud/abilities/melee_damage_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/melee_damage.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_melee_butcher",
+        "ability:citadel_ability_melee_kali",
+        "ability:citadel_ability_melee_butcher",
+        "ability:citadel_ability_melee_gunslinger",
+        "ability:citadel_ability_melee_yakuza",
+        "ability:citadel_ability_melee_thumper",
+        "ability:citadel_ability_melee_architect",
+        "ability:melee_base",
+        "ability:citadel_hold_melee",
+        "ability:citadel_ability_melee_genericperson",
+        "ability:ability_melee_astro",
+        "ability:citadel_ability_melee_bull",
+        "ability:citadel_ability_melee_bebop",
+        "ability:ability_melee_bomber",
+        "ability:citadel_ability_melee_cadence",
+        "ability:citadel_ability_melee_chrono",
+        "ability:citadel_ability_melee_sumo",
+        "ability:citadel_ability_melee_engineer",
+        "ability:citadel_ability_melee_targetdummy",
+        "ability:ability_melee_ghost",
+        "ability:citadel_ability_melee_gigawatt",
+        "ability:ability_melee_haze",
+        "ability:citadel_ability_melee_hornet",
+        "ability:ability_melee_inferno",
+        "ability:ability_melee_kelvin",
+        "ability:ability_melee_lash",
+        "ability:ability_melee_mirage",
+        "ability:ability_melee_digger",
+        "ability:ability_melee_nano",
+        "ability:ability_melee_archer",
+        "ability:citadel_ability_melee_shiv",
+        "ability:ability_melee_shieldguy",
+        "ability:citadel_ability_melee_tengu",
+        "ability:citadel_ability_melee_tokamak",
+        "ability:ability_melee_viscous",
+        "ability:citadel_ability_melee_warden",
+        "ability:citadel_ability_melee_wraith",
+        "ability:ability_melee_wrecker",
+        "ability:ability_melee_yamato",
+        "ability:ability_melee_viper",
+        "ability:ability_melee_vandal",
+        "ability:ability_melee_magician",
+        "ability:ability_melee_trapper",
+        "ability:ability_melee_vampirebat",
+        "ability:ability_melee_boho",
+        "ability:ability_melee_swan",
+        "ability:ability_melee_skyrunner",
+        "ability:ability_melee_graf",
+        "ability:ability_melee_fortuna",
+        "ability:ability_melee_frank",
+        "ability:ability_melee_bookworm",
+        "ability:ability_melee_doorman",
+        "ability:ability_melee_punkgoat",
+        "ability:ability_melee_drifter",
+        "ability:ability_melee_priest",
+        "ability:ability_melee_familiar",
+        "ability:ability_melee_fencer",
+        "ability:ability_melee_necro",
+        "ability:ability_melee_werewolf",
+        "ability:ability_melee_unicorn"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_djinns_reach.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_djinns_reach_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_djinns_reach.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_boho_channeltether"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_fire_beetles.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_fire_beetles_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_fire_beetles.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:mirage_fire_beetles",
+        "ability:ability_swan_featherboomerang"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_sand_phantom.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_sand_phantom_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_sand_phantom.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:mirage_sand_phantom",
+        "ability:ability_magician_escape"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_sunfire_cataclysm.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_sunfire_cataclysm_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_sunfire_cataclysm.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_wrecker_garbage_suck"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_teleport.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_teleport_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_teleport.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:mirage_teleport"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/mirage/mirage_tornado.psd",
+      "vpkPath": "panorama/images/hud/abilities/mirage/mirage_tornado_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/mirage/mirage_tornado.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:mirage_tornado"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_catform.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_catform_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_catform.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_catform"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_clustergrenade.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_clustergrenade_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_clustergrenade.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_clustergrenade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_dash.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_dash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_dash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_dash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_roller_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_roller_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_roller_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bomber_ability02",
+        "ability:ability_bomber_ability03",
+        "ability:ability_nano_proximity_ritual",
+        "ability:ability_shieldguy_ability01",
+        "ability:ability_shieldguy_ability02",
+        "ability:ability_shieldguy_ability03",
+        "ability:ability_boho_ability01",
+        "ability:ability_boho_ability02",
+        "ability:ability_graf_ability01",
+        "ability:ability_graf_ability02",
+        "ability:ability_graf_ability03",
+        "ability:ability_fortuna_ability01",
+        "ability:ability_fortuna_ability02",
+        "ability:ability_fortuna_ability03"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_shadow_pulse.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_shadow_pulse_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_shadow_pulse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_shadow_pulse"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_tunnel_vision.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_tunnel_vision_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_tunnel_vision.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_bomber_ult",
+        "ability:ability_shieldguy_ult",
+        "ability:ability_swan_ult",
+        "ability:ability_skyrunner_ult",
+        "ability:ability_graf_ult",
+        "ability:ability_fortuna_ult"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/nano/nano_warp.psd",
+      "vpkPath": "panorama/images/hud/abilities/nano/nano_warp_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/nano/nano_warp.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_pounce",
+        "ability:ability_nano_pounce_instant"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/necro/necro_coffin.psd",
+      "vpkPath": "panorama/images/hud/abilities/necro/necro_coffin_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/necro/necro_coffin.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_coffin"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/necro/necro_gravestone.psd",
+      "vpkPath": "panorama/images/hud/abilities/necro/necro_gravestone_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/necro/necro_gravestone.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_gravestone"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/necro/necro_hands.psd",
+      "vpkPath": "panorama/images/hud/abilities/necro/necro_hands_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/necro/necro_hands.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_zombiewall"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/necro/necro_siphon.psd",
+      "vpkPath": "panorama/images/hud/abilities/necro/necro_siphon_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/necro/necro_siphon.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_fear"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/necro/necro_skull.psd",
+      "vpkPath": "panorama/images/hud/abilities/necro/necro_skull_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/necro/necro_skull.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_hauntingskull",
+        "ability:ability_necro_wither"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/operative/operative_blindside.psd",
+      "vpkPath": "panorama/images/hud/abilities/operative/operative_blindside_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/operative/operative_blindside.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:operative_blindside"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/phalanx_beef.psd",
+      "vpkPath": "panorama/images/hud/abilities/phalanx_beef_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/phalanx_beef.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_hunt"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/priest/priest_crossbow.psd",
+      "vpkPath": "panorama/images/hud/abilities/priest/priest_crossbow_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/priest/priest_crossbow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_weaponswap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/priest/priest_grenade.psd",
+      "vpkPath": "panorama/images/hud/abilities/priest/priest_grenade_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/priest/priest_grenade.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_flashbang"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/priest/priest_shotgun.psd",
+      "vpkPath": "panorama/images/hud/abilities/priest/priest_shotgun_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/priest/priest_shotgun.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_knockback"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/priest/priest_trap.psd",
+      "vpkPath": "panorama/images/hud/abilities/priest/priest_trap_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/priest/priest_trap.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_beartrap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/punkgoat/goat_blasted.psd",
+      "vpkPath": "panorama/images/hud/abilities/punkgoat/goat_blasted_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/punkgoat/goat_blasted.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_punkgoat_blasted"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/punkgoat/goat_chaingang.psd",
+      "vpkPath": "panorama/images/hud/abilities/punkgoat/goat_chaingang_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/punkgoat/goat_chaingang.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_punkgoat_tether"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/punkgoat/goat_risingram.psd",
+      "vpkPath": "panorama/images/hud/abilities/punkgoat/goat_risingram_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/punkgoat/goat_risingram.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_punkgoat_goatflip"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/punkgoat/goat_sigilslam.psd",
+      "vpkPath": "panorama/images/hud/abilities/punkgoat/goat_sigilslam_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/punkgoat/goat_sigilslam.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_punkgoat_ult"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/punkgoat/punkgoat_capricious.psd",
+      "vpkPath": "panorama/images/hud/abilities/punkgoat/punkgoat_capricious_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/punkgoat/punkgoat_capricious.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_necro_killsummon_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/rutger/rutger_cheat_death.psd",
+      "vpkPath": "panorama/images/hud/abilities/rutger/rutger_cheat_death_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/rutger/rutger_cheat_death.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:rutger_cheat_death",
+        "ability:fathom_defer_damage",
+        "ability:ability_magician_shadowclone"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/rutger/rutger_force_field.psd",
+      "vpkPath": "panorama/images/hud/abilities/rutger/rutger_force_field_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/rutger/rutger_force_field.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:rutger_force_field"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/rutger/rutger_pulse.psd",
+      "vpkPath": "panorama/images/hud/abilities/rutger/rutger_pulse_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/rutger/rutger_pulse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:rutger_pulse"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/rutger/rutger_rocket_launcher.psd",
+      "vpkPath": "panorama/images/hud/abilities/rutger/rutger_rocket_launcher_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/rutger/rutger_rocket_launcher.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:rutger_rocket"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_bloodletting.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_bloodletting_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_bloodletting.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_shiv_defer_damage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_flash.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_flash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_flash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_shiv_dash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_gather_foes.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_gather_foes_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_gather_foes.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_magewalk"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_killing_blow.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_killing_blow_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_killing_blow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_shiv_killing_blow"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_prison_dance.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_prison_dance_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_prison_dance.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_boho_doublehit"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/shiv/shiv_toss.psd",
+      "vpkPath": "panorama/images/hud/abilities/shiv/shiv_toss_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/shiv/shiv_toss.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_shiv_dagger",
+        "ability:ability_viper_hookdagger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/slork/slork_invis.psd",
+      "vpkPath": "panorama/images/hud/abilities/slork/slork_invis_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/slork/slork_invis.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_nano_shadow_step",
+        "ability:fathom_lurkers_ambush"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/slork/slork_scald.psd",
+      "vpkPath": "panorama/images/hud/abilities/slork/slork_scald_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/slork/slork_scald.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:fathom_scalding_spray"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/spectre/blood_bomb.psd",
+      "vpkPath": "panorama/images/hud/abilities/spectre/blood_bomb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/spectre/blood_bomb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tier3boss_drop_bombs",
+        "ability:ability_blood_bomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/spectre/blood_exchange.psd",
+      "vpkPath": "panorama/images/hud/abilities/spectre/blood_exchange_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/spectre/blood_exchange.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_health_swap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/spectre/death_tax.psd",
+      "vpkPath": "panorama/images/hud/abilities/spectre/death_tax_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/spectre/death_tax.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_death_tax"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/spectre/geist_dagger.psd",
+      "vpkPath": "panorama/images/hud/abilities/spectre/geist_dagger_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/spectre/geist_dagger.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_blood_shards"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/spectre/life_drain.psd",
+      "vpkPath": "panorama/images/hud/abilities/spectre/life_drain_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/spectre/life_drain.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_life_drain",
+        "ability:ability_necro_killsummon"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/sumo/sumo_charge.psd",
+      "vpkPath": "panorama/images/hud/abilities/sumo/sumo_charge_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/sumo/sumo_charge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_charged_tackle"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/sumo/sumo_pork_bun.psd",
+      "vpkPath": "panorama/images/hud/abilities/sumo/sumo_pork_bun_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/sumo/sumo_pork_bun.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_nikuman",
+        "ability:operative_revelation"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/sumo/sumo_quantum.psd",
+      "vpkPath": "panorama/images/hud/abilities/sumo/sumo_quantum_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/sumo/sumo_quantum.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_void_sphere"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/sumo/sumo_stomp.psd",
+      "vpkPath": "panorama/images/hud/abilities/sumo/sumo_stomp_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/sumo/sumo_stomp.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tier2boss_stomp",
+        "ability:citadel_ability_tier2boss_aoe_wave",
+        "ability:citadel_ability_tier3boss_aoe_wave",
+        "ability:gunslinger_rapid_fire",
+        "ability:gunslinger_rocket_launcher",
+        "ability:gunslinger_tenacity",
+        "ability:gunslinger_sleep_bomb",
+        "ability:citadel_ability_stomp"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/sumo/sumo_vacuum.psd",
+      "vpkPath": "panorama/images/hud/abilities/sumo/sumo_vacuum_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/sumo/sumo_vacuum.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_self_vacuum"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/synth/synth_affliction.psd",
+      "vpkPath": "panorama/images/hud/abilities/synth/synth_affliction_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/synth/synth_affliction.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:synth_affliction"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/synth/synth_barrage.psd",
+      "vpkPath": "panorama/images/hud/abilities/synth/synth_barrage_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/synth/synth_barrage.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:synth_barrage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/synth/synth_grasp.psd",
+      "vpkPath": "panorama/images/hud/abilities/synth/synth_grasp_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/synth/synth_grasp.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_boho_damageshare"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/synth/synth_plasma_flux.psd",
+      "vpkPath": "panorama/images/hud/abilities/synth/synth_plasma_flux_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/synth/synth_plasma_flux.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:synth_plasma_flux"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/synth/synth_pulse.psd",
+      "vpkPath": "panorama/images/hud/abilities/synth/synth_pulse_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/synth/synth_pulse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:synth_pulse"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/targetdummy/targetdummy_ability_1.psd",
+      "vpkPath": "panorama/images/hud/abilities/targetdummy/targetdummy_ability_1_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/targetdummy/targetdummy_ability_1.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:targetdummy_ability_1"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/targetdummy/targetdummy_ability_2.psd",
+      "vpkPath": "panorama/images/hud/abilities/targetdummy/targetdummy_ability_2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/targetdummy/targetdummy_ability_2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:targetdummy_ability_2"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/targetdummy/targetdummy_ability_3.psd",
+      "vpkPath": "panorama/images/hud/abilities/targetdummy/targetdummy_ability_3_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/targetdummy/targetdummy_ability_3.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:targetdummy_ability_3"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/targetdummy/targetdummy_ability_4.psd",
+      "vpkPath": "panorama/images/hud/abilities/targetdummy/targetdummy_ability_4_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/targetdummy/targetdummy_ability_4.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:targetdummy_ability_4"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tengu/tengu_lightning_crash.psd",
+      "vpkPath": "panorama/images/hud/abilities/tengu/tengu_lightning_crash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tengu/tengu_lightning_crash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tengu_airlift"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tengu/tengu_stone_form.psd",
+      "vpkPath": "panorama/images/hud/abilities/tengu/tengu_stone_form_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tengu/tengu_stone_form.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tengu_stone_form"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tengu/tengu_storm_flask.psd",
+      "vpkPath": "panorama/images/hud/abilities/tengu/tengu_storm_flask_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tengu/tengu_storm_flask.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tengu_urn"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tengu/tengu_tether.psd",
+      "vpkPath": "panorama/images/hud/abilities/tengu/tengu_tether_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tengu/tengu_tether.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_tangotether"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/theboss/the_boss_hired_muscle.psd",
+      "vpkPath": "panorama/images/hud/abilities/theboss/the_boss_hired_muscle_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/theboss/the_boss_hired_muscle.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:yakuza_kobun"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/theboss/the_boss_protection_racket.psd",
+      "vpkPath": "panorama/images/hud/abilities/theboss/the_boss_protection_racket_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/theboss/the_boss_protection_racket.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:yakuza_protection_racket"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/theboss/the_boss_setting_sun.psd",
+      "vpkPath": "panorama/images/hud/abilities/theboss/the_boss_setting_sun_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/theboss/the_boss_setting_sun.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:yakuza_setting_sun"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/theboss/the_boss_shakedown.psd",
+      "vpkPath": "panorama/images/hud/abilities/theboss/the_boss_shakedown_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/theboss/the_boss_shakedown.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:yakuza_shakedown_target"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/thumper/thumper_ability_1.psd",
+      "vpkPath": "panorama/images/hud/abilities/thumper/thumper_ability_1_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/thumper/thumper_ability_1.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:thumper_ability_1"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/thumper/thumper_ability_2.psd",
+      "vpkPath": "panorama/images/hud/abilities/thumper/thumper_ability_2_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/thumper/thumper_ability_2.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:thumper_ability_2"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/thumper/thumper_ability_3.psd",
+      "vpkPath": "panorama/images/hud/abilities/thumper/thumper_ability_3_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/thumper/thumper_ability_3.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:thumper_ability_3"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/thumper/thumper_ability_4.psd",
+      "vpkPath": "panorama/images/hud/abilities/thumper/thumper_ability_4_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/thumper/thumper_ability_4.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:thumper_ability_4"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_blinding_radiance.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_blinding_radiance_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_blinding_radiance.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:tokamak_radiance",
+        "ability:ability_viper_ult",
+        "ability:ability_vandal_pillar"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_breach.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_breach_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_breach.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:tokamak_breach"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_crimson_cannon.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_crimson_cannon_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_crimson_cannon.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:tokamak_crimson_cannon"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_dying_star.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_dying_star_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_dying_star.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:fathom_breach",
+        "ability:tokamak_dying_star"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_heat_sinks.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_heat_sinks_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_heat_sinks.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:tokamak_heat_sinks"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/tokamak/tokamak_hot_shot.psd",
+      "vpkPath": "panorama/images/hud/abilities/tokamak/tokamak_hot_shot_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/tokamak/tokamak_hot_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:tokamak_hot_shot",
+        "ability:ability_gunslinger_salvo",
+        "ability:gunslinger_knockbackblast",
+        "ability:ability_necro_nukemap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/trapper/trapper_poison_jar.psd",
+      "vpkPath": "panorama/images/hud/abilities/trapper/trapper_poison_jar_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/trapper/trapper_poison_jar.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trapper_poisonjar"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/trapper/trapper_spider_shield.psd",
+      "vpkPath": "panorama/images/hud/abilities/trapper/trapper_spider_shield_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/trapper/trapper_spider_shield.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trapper_spidershield"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/trapper/trapper_spider_wave.psd",
+      "vpkPath": "panorama/images/hud/abilities/trapper/trapper_spider_wave_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/trapper/trapper_spider_wave.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trapper_spiderwave",
+        "ability:ability_necro_haunt"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/trapper/trapper_web_wall.psd",
+      "vpkPath": "panorama/images/hud/abilities/trapper/trapper_web_wall_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/trapper/trapper_web_wall.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trapper_webwall"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/unicorn/unicorn_flare.psd",
+      "vpkPath": "panorama/images/hud/abilities/unicorn/unicorn_flare_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/unicorn/unicorn_flare.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_unicorn_radiantblast"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/unicorn/unicorn_luminousflux.psd",
+      "vpkPath": "panorama/images/hud/abilities/unicorn/unicorn_luminousflux_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/unicorn/unicorn_luminousflux.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_unicorn_luminousstrike"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/unicorn/unicorn_orb.psd",
+      "vpkPath": "panorama/images/hud/abilities/unicorn/unicorn_orb_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/unicorn/unicorn_orb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_unicorn_dazzlingorb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/unicorn/unicorn_shield.psd",
+      "vpkPath": "panorama/images/hud/abilities/unicorn/unicorn_shield_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/unicorn/unicorn_shield.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_unicorn_prismaticguard"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/vampirebat/vampirebat_love_bites.psd",
+      "vpkPath": "panorama/images/hud/abilities/vampirebat/vampirebat_love_bites_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/vampirebat/vampirebat_love_bites.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_vampirebat_lovebites"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/vampirebat/vampirebat_nox_nostra.psd",
+      "vpkPath": "panorama/images/hud/abilities/vampirebat/vampirebat_nox_nostra_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/vampirebat/vampirebat_nox_nostra.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_vampirebat_batswarm",
+        "ability:ability_vampirebat_batcloud"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/vampirebat/vampirebat_rake.psd",
+      "vpkPath": "panorama/images/hud/abilities/vampirebat/vampirebat_rake_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/vampirebat/vampirebat_rake.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_vampirebat_steallife"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/vampirebat/vampirebat_sanguine_retreat.psd",
+      "vpkPath": "panorama/images/hud/abilities/vampirebat/vampirebat_sanguine_retreat_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/vampirebat/vampirebat_sanguine_retreat.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_vampirebat_batblink",
+        "ability:ability_vampirebat_batblink_trigger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viper/viper_debuffdagger.psd",
+      "vpkPath": "panorama/images/hud/abilities/viper/viper_debuffdagger_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viper/viper_debuffdagger.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_viper_debuffdagger"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viper/viper_petrifybola.psd",
+      "vpkPath": "panorama/images/hud/abilities/viper/viper_petrifybola_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viper/viper_petrifybola.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_viper_petrifybola"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viper/viper_snakedash.psd",
+      "vpkPath": "panorama/images/hud/abilities/viper/viper_snakedash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viper/viper_snakedash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_viper_snakedash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viper/viper_venom.psd",
+      "vpkPath": "panorama/images/hud/abilities/viper/viper_venom_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viper/viper_venom.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_viper_venom"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viscous/viscous_goo_ball.psd",
+      "vpkPath": "panorama/images/hud/abilities/viscous/viscous_goo_ball_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viscous/viscous_goo_ball.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:viscous_goo_grenade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viscous/viscous_goo_punch.psd",
+      "vpkPath": "panorama/images/hud/abilities/viscous/viscous_goo_punch_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viscous/viscous_goo_punch.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:viscous_telepunch"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viscous/viscous_goo_sphere.psd",
+      "vpkPath": "panorama/images/hud/abilities/viscous/viscous_goo_sphere_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viscous/viscous_goo_sphere.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:viscous_goo_bowling_ball"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/viscous/viscous_restorative_goo.psd",
+      "vpkPath": "panorama/images/hud/abilities/viscous/viscous_restorative_goo_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/viscous/viscous_restorative_goo.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:viscous_restorative_goo"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/warden/warden_crowd_control.psd",
+      "vpkPath": "panorama/images/hud/abilities/warden/warden_crowd_control_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/warden/warden_crowd_control.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_warden_crowd_control",
+        "ability:ability_priest_smokegrenade",
+        "ability:ability_priest_silencebomb"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/warden/warden_high_alert.psd",
+      "vpkPath": "panorama/images/hud/abilities/warden/warden_high_alert_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/warden/warden_high_alert.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_warden_high_alert"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/warden/warden_lock_down.psd",
+      "vpkPath": "panorama/images/hud/abilities/warden/warden_lock_down_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/warden/warden_lock_down.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_warden_lock_down"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/warden/warden_riot_protocol.psd",
+      "vpkPath": "panorama/images/hud/abilities/warden/warden_riot_protocol_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/warden/warden_riot_protocol.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_warden_riot_protocol"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/weapon_damage.psd",
+      "vpkPath": "panorama/images/hud/abilities/weapon_damage_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/weapon_damage.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_weapon_bosstier2_set",
+        "ability:citadel_weapon_bosstier3_set",
+        "ability:citadel_weapon_base_defense_turret",
+        "ability:citadel_weapon_rutger_set",
+        "ability:citadel_weapon_kali_set",
+        "ability:citadel_weapon_gunslinger_set",
+        "ability:citadel_weapon_yakuza_set",
+        "ability:citadel_weapon_architect_set",
+        "ability:citadel_weapon_thumper_set",
+        "ability:weapon_base",
+        "ability:hero_weapon_base",
+        "ability:hero_shotgun_base",
+        "ability:weapon_alternative_rmb_activate",
+        "ability:weapon_alternative_rmb+lmb_activate",
+        "ability:citadel_weapon_astro_set",
+        "ability:citadel_weapon_astro_set_shotgun_shared_base",
+        "ability:citadel_weapon_astro_set_shotgun",
+        "ability:citadel_weapon_astro_set_shotgun_backwards",
+        "ability:citadel_weapon_astro_hand_cannon",
+        "ability:citadel_weapon_bull_set",
+        "ability:citadel_weapon_bebop_set",
+        "ability:citadel_weapon_bomber_set",
+        "ability:citadel_weapon_cadence_set",
+        "ability:citadel_weapon_chrono_set",
+        "ability:citadel_weapon_sumo_set",
+        "ability:citadel_weapon_engineer_set",
+        "ability:citadel_weapon_genericperson_set",
+        "ability:citadel_weapon_targetdummy_set",
+        "ability:citadel_weapon_ghost_set",
+        "ability:citadel_weapon_gigawatt_set",
+        "ability:citadel_weapon_haze_set",
+        "ability:citadel_weapon_hornet_set",
+        "ability:citadel_weapon_inferno_set",
+        "ability:citadel_weapon_kelvin_set",
+        "ability:citadel_weapon_lash_set",
+        "ability:citadel_weapon_mirage_set",
+        "ability:citadel_weapon_digger_set",
+        "ability:citadel_weapon_digger_set2",
+        "ability:citadel_weapon_nano_set",
+        "ability:citadel_weapon_nano_alt",
+        "ability:citadel_weapon_archer_set",
+        "ability:citadel_weapon_shiv_set",
+        "ability:citadel_weapon_shiv_alt",
+        "ability:citadel_weapon_shieldguy_set",
+        "ability:citadel_weapon_slork_set",
+        "ability:citadel_weapon_synth_set",
+        "ability:citadel_weapon_tengu_set",
+        "ability:citadel_weapon_tokamak_set",
+        "ability:citadel_weapon_viscous_set",
+        "ability:citadel_weapon_viscous_set_2",
+        "ability:citadel_weapon_warden_set",
+        "ability:citadel_weapon_wraith_set",
+        "ability:citadel_weapon_wrecker_set",
+        "ability:citadel_weapon_yamato_set",
+        "ability:citadel_weapon_yamato_alt",
+        "ability:citadel_weapon_viper_set",
+        "ability:citadel_weapon_vandal_set",
+        "ability:citadel_weapon_magician_set",
+        "ability:citadel_weapon_trapper_set",
+        "ability:citadel_weapon_operative_set",
+        "ability:citadel_weapon_gunslinger2_set",
+        "ability:citadel_weapon_vampirebat_set",
+        "ability:citadel_weapon_vampirebat_set2",
+        "ability:citadel_weapon_boho_set",
+        "ability:citadel_weapon_swan_set",
+        "ability:citadel_weapon_skyrunner_set",
+        "ability:citadel_weapon_skyrunner_alt",
+        "ability:citadel_weapon_graf_set",
+        "ability:citadel_weapon_fortuna_set",
+        "ability:citadel_weapon_frank_set2",
+        "ability:citadel_weapon_bookworm_set",
+        "ability:citadel_weapon_bookworm_set2",
+        "ability:citadel_weapon_doorman_set",
+        "ability:citadel_weapon_doorman_alt",
+        "ability:citadel_weapon_punkgoat_set",
+        "ability:citadel_weapon_drifter_set",
+        "ability:citadel_weapon_drifter_alt",
+        "ability:citadel_weapon_priest_set",
+        "ability:citadel_weapon_priest_crossbow",
+        "ability:ability_familiar_alt_weapon",
+        "ability:ability_familiar_primary_weapon_bubblegun",
+        "ability:citadel_weapon_fencer_set",
+        "ability:citadel_weapon_fencer_alt",
+        "ability:citadel_weapon_necro_set",
+        "ability:citadel_weapon_werewolf_rifle",
+        "ability:citadel_weapon_werewolf_claws",
+        "ability:citadel_weapon_unicorn_set"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_bite.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_bite_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_bite.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_frenzy"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_bola.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_bola_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_bola.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_netshot"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_jumpback.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_jumpback_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_jumpback.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_kickflip"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_lycancurse.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_lycancurse_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_lycancurse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_transformation"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_slamfire.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_slamfire_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_slamfire.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_unloadgun"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_tailwhack.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_tailwhack_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_tailwhack.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_cripplingslash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/werewolf/werewolf_wolfforward.psd",
+      "vpkPath": "panorama/images/hud/abilities/werewolf/werewolf_wolfforward_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/werewolf/werewolf_wolfforward.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_werewolf_maulingleap",
+        "ability:ability_werewolf_leap"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wraith_aura.psd",
+      "vpkPath": "panorama/images/hud/abilities/wraith_aura_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wraith_aura.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_wraith_rapidfire"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wraith_card_trick.psd",
+      "vpkPath": "panorama/images/hud/abilities/wraith_card_trick_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wraith_card_trick.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_card_toss"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wraith_lift.psd",
+      "vpkPath": "panorama/images/hud/abilities/wraith_lift_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wraith_lift.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_golden_idol",
+        "ability:citadel_ability_psychic_lift",
+        "ability:citadel_ability_vandal_surge",
+        "ability:citadel_ability_vandal_overflow"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wraith_teleport.psd",
+      "vpkPath": "panorama/images/hud/abilities/wraith_teleport_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wraith_teleport.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_projectmind"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wrecker/salvage.psd",
+      "vpkPath": "panorama/images/hud/abilities/wrecker/salvage_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wrecker/salvage.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_wrecker_salvage"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wrecker/scrap_blast.psd",
+      "vpkPath": "panorama/images/hud/abilities/wrecker/scrap_blast_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wrecker/scrap_blast.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_scrap_blast"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wrecker/wrecking_ball.psd",
+      "vpkPath": "panorama/images/hud/abilities/wrecker/wrecking_ball_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wrecker/wrecking_ball.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_wrecking_ball",
+        "ability:citadel_ability_wrecker_bouldergrenade"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/wrecker/wrecking_crew.psd",
+      "vpkPath": "panorama/images/hud/abilities/wrecker/wrecking_crew_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/wrecker/wrecking_crew.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_wrecker_ultimate",
+        "ability:ability_wrecker_teleport"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/yamato/yamato_blinding_steel.psd",
+      "vpkPath": "panorama/images/hud/abilities/yamato/yamato_blinding_steel_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/yamato/yamato_blinding_steel.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_infinity_slash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/yamato/yamato_crimson_slash.psd",
+      "vpkPath": "panorama/images/hud/abilities/yamato/yamato_crimson_slash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/yamato/yamato_crimson_slash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_healing_slash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/yamato/yamato_flying_strike.psd",
+      "vpkPath": "panorama/images/hud/abilities/yamato/yamato_flying_strike_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/yamato/yamato_flying_strike.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_flying_strike"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/abilities/yamato/yamato_power_slash.psd",
+      "vpkPath": "panorama/images/hud/abilities/yamato/yamato_power_slash_psd.vtex_c",
+      "outPath": "public/images/hud/abilities/yamato/yamato_power_slash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_power_slash"
+      ]
+    },
+    {
+      "ref": "file://{images}/hud/icons/icon_speed.svg",
+      "vpkPath": "panorama/images/hud/icons/icon_speed.vsvg_c",
+      "outPath": "public/images/hud/icons/icon_speed.svg",
+      "kind": "vsvg",
+      "usedBy": [
+        "ability:citadel_ability_sprint"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/arcane_surge.psd",
+      "vpkPath": "panorama/images/items/spirit/arcane_surge_psd.vtex_c",
+      "outPath": "public/images/items/spirit/arcane_surge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_arcane_surge"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/arctic_blast.psd",
+      "vpkPath": "panorama/images/items/spirit/arctic_blast_psd.vtex_c",
+      "outPath": "public/images/items/spirit/arctic_blast.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_arctic_blast"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/boundless_spirit.psd",
+      "vpkPath": "panorama/images/items/spirit/boundless_spirit_psd.vtex_c",
+      "outPath": "public/images/items/spirit/boundless_spirit.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_boundless_spirit"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/bullet_resist_shredder.psd",
+      "vpkPath": "panorama/images/items/spirit/bullet_resist_shredder_psd.vtex_c",
+      "outPath": "public/images/items/spirit/bullet_resist_shredder.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_bullet_resist_shredder"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/cold_front.psd",
+      "vpkPath": "panorama/images/items/spirit/cold_front_psd.vtex_c",
+      "outPath": "public/images/items/spirit/cold_front.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_cold_front"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/curse.psd",
+      "vpkPath": "panorama/images/items/spirit/curse_psd.vtex_c",
+      "outPath": "public/images/items/spirit/curse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_glitch"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/decay.psd",
+      "vpkPath": "panorama/images/items/spirit/decay_psd.vtex_c",
+      "outPath": "public/images/items/spirit/decay.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rupture"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/disarming_hex.psd",
+      "vpkPath": "panorama/images/items/spirit/disarming_hex_psd.vtex_c",
+      "outPath": "public/images/items/spirit/disarming_hex.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_greater_withering_whip"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/duration_extender.psd",
+      "vpkPath": "panorama/images/items/spirit/duration_extender_psd.vtex_c",
+      "outPath": "public/images/items/spirit/duration_extender.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_arcane_extension"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/echo_shard.psd",
+      "vpkPath": "panorama/images/items/spirit/echo_shard_psd.vtex_c",
+      "outPath": "public/images/items/spirit/echo_shard.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_ability_power_shard"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/escalating_exposure.psd",
+      "vpkPath": "panorama/images/items/spirit/escalating_exposure_psd.vtex_c",
+      "outPath": "public/images/items/spirit/escalating_exposure.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_escalating_exposure"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/ethereal_shift.psd",
+      "vpkPath": "panorama/images/items/spirit/ethereal_shift_psd.vtex_c",
+      "outPath": "public/images/items/spirit/ethereal_shift.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_self_bubble"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/extra_charge.psd",
+      "vpkPath": "panorama/images/items/spirit/extra_charge_psd.vtex_c",
+      "outPath": "public/images/items/spirit/extra_charge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_extra_charge"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/extra_spirit.psd",
+      "vpkPath": "panorama/images/items/spirit/extra_spirit_psd.vtex_c",
+      "outPath": "public/images/items/spirit/extra_spirit.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_improved_spirit"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/focus_lens.psd",
+      "vpkPath": "panorama/images/items/spirit/focus_lens_psd.vtex_c",
+      "outPath": "public/images/items/spirit/focus_lens.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_focus_lens"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/goose_egg.psd",
+      "vpkPath": "panorama/images/items/spirit/goose_egg_psd.vtex_c",
+      "outPath": "public/images/items/spirit/goose_egg.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_goose_egg"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/greater_expansion.psd",
+      "vpkPath": "panorama/images/items/spirit/greater_expansion_psd.vtex_c",
+      "outPath": "public/images/items/spirit/greater_expansion.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_tech_range"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/improved_cooldown.psd",
+      "vpkPath": "panorama/images/items/spirit/improved_cooldown_psd.vtex_c",
+      "outPath": "public/images/items/spirit/improved_cooldown.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_tempo"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/improved_spirit.psd",
+      "vpkPath": "panorama/images/items/spirit/improved_spirit_psd.vtex_c",
+      "outPath": "public/images/items/spirit/improved_spirit.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_soaring_spirit"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/knockdown.psd",
+      "vpkPath": "panorama/images/items/spirit/knockdown_psd.vtex_c",
+      "outPath": "public/images/items/spirit/knockdown.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_target_stun"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/lightning_scroll.psd",
+      "vpkPath": "panorama/images/items/spirit/lightning_scroll_psd.vtex_c",
+      "outPath": "public/images/items/spirit/lightning_scroll.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_ultimate_burst"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/magic_carpet.psd",
+      "vpkPath": "panorama/images/items/spirit/magic_carpet_psd.vtex_c",
+      "outPath": "public/images/items/spirit/magic_carpet.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_carpet"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mercurial_magnum.psd",
+      "vpkPath": "panorama/images/items/spirit/mercurial_magnum_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mercurial_magnum.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_ethereal_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_burst.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_burst_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_burst.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_burst"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_reach.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_reach_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_reach.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_reach"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_regen.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_regen_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_regen.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_mystic_regeneration"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_reverb.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_reverb_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_reverb.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_mystic_reverb"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_slow.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_slow_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_slow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_slow"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/mystic_vulnerability.psd",
+      "vpkPath": "panorama/images/items/spirit/mystic_vulnerability_psd.vtex_c",
+      "outPath": "public/images/items/spirit/mystic_vulnerability.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_vulnerability"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/quicksilver_reload.psd",
+      "vpkPath": "panorama/images/items/spirit/quicksilver_reload_psd.vtex_c",
+      "outPath": "public/images/items/spirit/quicksilver_reload.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_quick_silver"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/radiant_regeneration.psd",
+      "vpkPath": "panorama/images/items/spirit/radiant_regeneration_psd.vtex_c",
+      "outPath": "public/images/items/spirit/radiant_regeneration.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_resonant_healing"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/rapid_recharge.psd",
+      "vpkPath": "panorama/images/items/spirit/rapid_recharge_psd.vtex_c",
+      "outPath": "public/images/items/spirit/rapid_recharge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rapid_recharge"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/refresher.psd",
+      "vpkPath": "panorama/images/items/spirit/refresher_psd.vtex_c",
+      "outPath": "public/images/items/spirit/refresher.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_ability_refresher"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/rusted_barrel.psd",
+      "vpkPath": "panorama/images/items/spirit/rusted_barrel_psd.vtex_c",
+      "outPath": "public/images/items/spirit/rusted_barrel.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_withering_whip"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/scourge.psd",
+      "vpkPath": "panorama/images/items/spirit/scourge_psd.vtex_c",
+      "outPath": "public/images/items/spirit/scourge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_discord"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/silence_glyph.psd",
+      "vpkPath": "panorama/images/items/spirit/silence_glyph_psd.vtex_c",
+      "outPath": "public/images/items/spirit/silence_glyph.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_targeted_silence"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/slowing_hex.psd",
+      "vpkPath": "panorama/images/items/spirit/slowing_hex_psd.vtex_c",
+      "outPath": "public/images/items/spirit/slowing_hex.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_containment"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/spirit_burn.psd",
+      "vpkPath": "panorama/images/items/spirit/spirit_burn_psd.vtex_c",
+      "outPath": "public/images/items/spirit/spirit_burn.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spirit_burn"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/spirit_sap.psd",
+      "vpkPath": "panorama/images/items/spirit/spirit_sap_psd.vtex_c",
+      "outPath": "public/images/items/spirit/spirit_sap.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spirit_sap"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/spirit_snatch.psd",
+      "vpkPath": "panorama/images/items/spirit/spirit_snatch_psd.vtex_c",
+      "outPath": "public/images/items/spirit/spirit_snatch.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spirit_snatch"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/spirit_strike.psd",
+      "vpkPath": "panorama/images/items/spirit/spirit_strike_psd.vtex_c",
+      "outPath": "public/images/items/spirit/spirit_strike.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_acolytes_glove"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/superior_cooldown.psd",
+      "vpkPath": "panorama/images/items/spirit/superior_cooldown_psd.vtex_c",
+      "outPath": "public/images/items/spirit/superior_cooldown.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_cooldown_reduction"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/superior_duration.psd",
+      "vpkPath": "panorama/images/items/spirit/superior_duration_psd.vtex_c",
+      "outPath": "public/images/items/spirit/superior_duration.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_imbued_duration_extender"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/suppressor.psd",
+      "vpkPath": "panorama/images/items/spirit/suppressor_psd.vtex_c",
+      "outPath": "public/images/items/spirit/suppressor.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_suppressor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/surge_of_power.psd",
+      "vpkPath": "panorama/images/items/spirit/surge_of_power_psd.vtex_c",
+      "outPath": "public/images/items/spirit/surge_of_power.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_storm"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/tankbuster.psd",
+      "vpkPath": "panorama/images/items/spirit/tankbuster_psd.vtex_c",
+      "outPath": "public/images/items/spirit/tankbuster.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_shock"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/torment_pulse.psd",
+      "vpkPath": "panorama/images/items/spirit/torment_pulse_psd.vtex_c",
+      "outPath": "public/images/items/spirit/torment_pulse.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_tech_damage_pulse"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/transcendent_cooldown.psd",
+      "vpkPath": "panorama/images/items/spirit/transcendent_cooldown_psd.vtex_c",
+      "outPath": "public/images/items/spirit/transcendent_cooldown.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_transcendent_cooldown"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/spirit/vortex_web.psd",
+      "vpkPath": "panorama/images/items/spirit/vortex_web_psd.vtex_c",
+      "outPath": "public/images/items/spirit/vortex_web.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_aoe_root"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/battle_vest.psd",
+      "vpkPath": "panorama/images/items/vitality/battle_vest_psd.vtex_c",
+      "outPath": "public/images/items/vitality/battle_vest.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_regenerating_bullet_shield"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/bullet_lifesteal.psd",
+      "vpkPath": "panorama/images/items/vitality/bullet_lifesteal_psd.vtex_c",
+      "outPath": "public/images/items/vitality/bullet_lifesteal.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_vampire"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/bullet_resilience.psd",
+      "vpkPath": "panorama/images/items/vitality/bullet_resilience_psd.vtex_c",
+      "outPath": "public/images/items/vitality/bullet_resilience.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_improved_bullet_armor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/cheat_death.psd",
+      "vpkPath": "panorama/images/items/vitality/cheat_death_psd.vtex_c",
+      "outPath": "public/images/items/vitality/cheat_death.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_cheat_death"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/colossus.psd",
+      "vpkPath": "panorama/images/items/vitality/colossus_psd.vtex_c",
+      "outPath": "public/images/items/vitality/colossus.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_colossus"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/counterspell.psd",
+      "vpkPath": "panorama/images/items/vitality/counterspell_psd.vtex_c",
+      "outPath": "public/images/items/vitality/counterspell.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_counterspell"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/debuff_reducer.psd",
+      "vpkPath": "panorama/images/items/vitality/debuff_reducer_psd.vtex_c",
+      "outPath": "public/images/items/vitality/debuff_reducer.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_debuff_reducer"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/debuff_remover.psd",
+      "vpkPath": "panorama/images/items/vitality/debuff_remover_psd.vtex_c",
+      "outPath": "public/images/items/vitality/debuff_remover.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_reduce_debuff_duration"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/divine_barrier.psd",
+      "vpkPath": "panorama/images/items/vitality/divine_barrier_psd.vtex_c",
+      "outPath": "public/images/items/vitality/divine_barrier.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_divine_barrier"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/diviners_kevlar.psd",
+      "vpkPath": "panorama/images/items/vitality/diviners_kevlar_psd.vtex_c",
+      "outPath": "public/images/items/vitality/diviners_kevlar.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_diviners_kevlar"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/enchanters_emblem.psd",
+      "vpkPath": "panorama/images/items/vitality/enchanters_emblem_psd.vtex_c",
+      "outPath": "public/images/items/vitality/enchanters_emblem.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_magic_shield"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/enduring_speed.psd",
+      "vpkPath": "panorama/images/items/vitality/enduring_speed_psd.vtex_c",
+      "outPath": "public/images/items/vitality/enduring_speed.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_cardio_calibrator"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/extra_health.psd",
+      "vpkPath": "panorama/images/items/vitality/extra_health_psd.vtex_c",
+      "outPath": "public/images/items/vitality/extra_health.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_health"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/extra_regen.psd",
+      "vpkPath": "panorama/images/items/vitality/extra_regen_psd.vtex_c",
+      "outPath": "public/images/items/vitality/extra_regen.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_endurance"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/extra_stamina.psd",
+      "vpkPath": "panorama/images/items/vitality/extra_stamina_psd.vtex_c",
+      "outPath": "public/images/items/vitality/extra_stamina.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_improved_stamina"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/fortitude.psd",
+      "vpkPath": "panorama/images/items/vitality/fortitude_psd.vtex_c",
+      "outPath": "public/images/items/vitality/fortitude.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_chonky"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/fury_trance.psd",
+      "vpkPath": "panorama/images/items/vitality/fury_trance_psd.vtex_c",
+      "outPath": "public/images/items/vitality/fury_trance.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_fury_trance"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/grit.psd",
+      "vpkPath": "panorama/images/items/vitality/grit_psd.vtex_c",
+      "outPath": "public/images/items/vitality/grit.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_grit"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/guardian_ward.psd",
+      "vpkPath": "panorama/images/items/vitality/guardian_ward_psd.vtex_c",
+      "outPath": "public/images/items/vitality/guardian_ward.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_guardian_ward"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/healbane.psd",
+      "vpkPath": "panorama/images/items/vitality/healbane_psd.vtex_c",
+      "outPath": "public/images/items/vitality/healbane.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_healbane"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/healing_booster.psd",
+      "vpkPath": "panorama/images/items/vitality/healing_booster_psd.vtex_c",
+      "outPath": "public/images/items/vitality/healing_booster.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_healing_booster"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/healing_nova.psd",
+      "vpkPath": "panorama/images/items/vitality/healing_nova_psd.vtex_c",
+      "outPath": "public/images/items/vitality/healing_nova.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_health_nova"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/healing_rite.psd",
+      "vpkPath": "panorama/images/items/vitality/healing_rite_psd.vtex_c",
+      "outPath": "public/images/items/vitality/healing_rite.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_health_stimpak"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/healing_tempo.psd",
+      "vpkPath": "panorama/images/items/vitality/healing_tempo_psd.vtex_c",
+      "outPath": "public/images/items/vitality/healing_tempo.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_healbuff"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/indomitable.psd",
+      "vpkPath": "panorama/images/items/vitality/indomitable_psd.vtex_c",
+      "outPath": "public/images/items/vitality/indomitable.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_auto_cleanse"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/infuser.psd",
+      "vpkPath": "panorama/images/items/vitality/infuser_psd.vtex_c",
+      "outPath": "public/images/items/vitality/infuser.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_infuser"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/inhibitor.psd",
+      "vpkPath": "panorama/images/items/vitality/inhibitor_psd.vtex_c",
+      "outPath": "public/images/items/vitality/inhibitor.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_inhibitor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/juggernaut.psd",
+      "vpkPath": "panorama/images/items/vitality/juggernaut_psd.vtex_c",
+      "outPath": "public/images/items/vitality/juggernaut.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_juggernaut"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/leech.psd",
+      "vpkPath": "panorama/images/items/vitality/leech_psd.vtex_c",
+      "outPath": "public/images/items/vitality/leech.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_damage_recycler"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/lifestrike.psd",
+      "vpkPath": "panorama/images/items/vitality/lifestrike_psd.vtex_c",
+      "outPath": "public/images/items/vitality/lifestrike.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_boxing_glove"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/majestic_leap.psd",
+      "vpkPath": "panorama/images/items/vitality/majestic_leap_psd.vtex_c",
+      "outPath": "public/images/items/vitality/majestic_leap.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rocket_booster"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/melee_lifesteal.psd",
+      "vpkPath": "panorama/images/items/vitality/melee_lifesteal_psd.vtex_c",
+      "outPath": "public/images/items/vitality/melee_lifesteal.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_lifestrike_gauntlets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/metal_skin.psd",
+      "vpkPath": "panorama/images/items/vitality/metal_skin_psd.vtex_c",
+      "outPath": "public/images/items/vitality/metal_skin.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_metal_skin"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/phantom_strike.psd",
+      "vpkPath": "panorama/images/items/vitality/phantom_strike_psd.vtex_c",
+      "outPath": "public/images/items/vitality/phantom_strike.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_phantom_strike"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/plated_armor.psd",
+      "vpkPath": "panorama/images/items/vitality/plated_armor_psd.vtex_c",
+      "outPath": "public/images/items/vitality/plated_armor.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_deflecting_armor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/reactive_barrier.psd",
+      "vpkPath": "panorama/images/items/vitality/reactive_barrier_psd.vtex_c",
+      "outPath": "public/images/items/vitality/reactive_barrier.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_vex_barrier"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/rebuttal.psd",
+      "vpkPath": "panorama/images/items/vitality/rebuttal_psd.vtex_c",
+      "outPath": "public/images/items/vitality/rebuttal.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_melee_rebuttal"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/rescue_beam.psd",
+      "vpkPath": "panorama/images/items/vitality/rescue_beam_psd.vtex_c",
+      "outPath": "public/images/items/vitality/rescue_beam.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rescue_beam"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/restorative_locket.psd",
+      "vpkPath": "panorama/images/items/vitality/restorative_locket_psd.vtex_c",
+      "outPath": "public/images/items/vitality/restorative_locket.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_restorative_locket"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/return_fire.psd",
+      "vpkPath": "panorama/images/items/vitality/return_fire_psd.vtex_c",
+      "outPath": "public/images/items/vitality/return_fire.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_return_fire"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/siphon_bullets.psd",
+      "vpkPath": "panorama/images/items/vitality/siphon_bullets_psd.vtex_c",
+      "outPath": "public/images/items/vitality/siphon_bullets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_siphon_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/spellbreaker.psd",
+      "vpkPath": "panorama/images/items/vitality/spellbreaker_psd.vtex_c",
+      "outPath": "public/images/items/vitality/spellbreaker.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spellbreaker"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/spirit_lifesteal.psd",
+      "vpkPath": "panorama/images/items/vitality/spirit_lifesteal_psd.vtex_c",
+      "outPath": "public/images/items/vitality/spirit_lifesteal.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_health_stealing_magic"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/spirit_resilience.psd",
+      "vpkPath": "panorama/images/items/vitality/spirit_resilience_psd.vtex_c",
+      "outPath": "public/images/items/vitality/spirit_resilience.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_tech_purge"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/spirit_shielding.psd",
+      "vpkPath": "panorama/images/items/vitality/spirit_shielding_psd.vtex_c",
+      "outPath": "public/images/items/vitality/spirit_shielding.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spirit_bubble"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/sprint_boots.psd",
+      "vpkPath": "panorama/images/items/vitality/sprint_boots_psd.vtex_c",
+      "outPath": "public/images/items/vitality/sprint_boots.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_sprint_booster"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/stamina_mastery.psd",
+      "vpkPath": "panorama/images/items/vitality/stamina_mastery_psd.vtex_c",
+      "outPath": "public/images/items/vitality/stamina_mastery.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_superior_stamina"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/trophy_collector.psd",
+      "vpkPath": "panorama/images/items/vitality/trophy_collector_psd.vtex_c",
+      "outPath": "public/images/items/vitality/trophy_collector.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_trophy_collector"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/unstoppable.psd",
+      "vpkPath": "panorama/images/items/vitality/unstoppable_psd.vtex_c",
+      "outPath": "public/images/items/vitality/unstoppable.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_unstoppable"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/vampiric_burst.psd",
+      "vpkPath": "panorama/images/items/vitality/vampiric_burst_psd.vtex_c",
+      "outPath": "public/images/items/vitality/vampiric_burst.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_surging_power"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/veil_walker.psd",
+      "vpkPath": "panorama/images/items/vitality/veil_walker_psd.vtex_c",
+      "outPath": "public/images/items/vitality/veil_walker.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_veil_walker"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/warp_stone.psd",
+      "vpkPath": "panorama/images/items/vitality/warp_stone_psd.vtex_c",
+      "outPath": "public/images/items/vitality/warp_stone.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_warp_stone"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/weapon_shielding.psd",
+      "vpkPath": "panorama/images/items/vitality/weapon_shielding_psd.vtex_c",
+      "outPath": "public/images/items/vitality/weapon_shielding.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_weapon_shielding"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/vitality/witchmail.psd",
+      "vpkPath": "panorama/images/items/vitality/witchmail_psd.vtex_c",
+      "outPath": "public/images/items/vitality/witchmail.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_absorbing_armor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/active_reload.psd",
+      "vpkPath": "panorama/images/items/weapon/active_reload_psd.vtex_c",
+      "outPath": "public/images/items/weapon/active_reload.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_active_reload"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/alchemical_fire.psd",
+      "vpkPath": "panorama/images/items/weapon/alchemical_fire_psd.vtex_c",
+      "outPath": "public/images/items/weapon/alchemical_fire.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_thermal_detonator"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/alchemical_seal.psd",
+      "vpkPath": "panorama/images/items/weapon/alchemical_seal_psd.vtex_c",
+      "outPath": "public/images/items/weapon/alchemical_seal.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_bulletshredimbue"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/armor_piercing_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/armor_piercing_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/armor_piercing_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_aprounds"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/backstabber.psd",
+      "vpkPath": "panorama/images/items/weapon/backstabber_psd.vtex_c",
+      "outPath": "public/images/items/weapon/backstabber.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_weapon_backstabber"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/basic_magazine.psd",
+      "vpkPath": "panorama/images/items/weapon/basic_magazine_psd.vtex_c",
+      "outPath": "public/images/items/weapon/basic_magazine.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_clip_size"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/berserker.psd",
+      "vpkPath": "panorama/images/items/weapon/berserker_psd.vtex_c",
+      "outPath": "public/images/items/weapon/berserker.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_berserker"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/blood_tribute.psd",
+      "vpkPath": "panorama/images/items/weapon/blood_tribute_psd.vtex_c",
+      "outPath": "public/images/items/weapon/blood_tribute.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_blood_tribute"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/burst_fire.psd",
+      "vpkPath": "panorama/images/items/weapon/burst_fire_psd.vtex_c",
+      "outPath": "public/images/items/weapon/burst_fire.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_burst_fire"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/capacitor.psd",
+      "vpkPath": "panorama/images/items/weapon/capacitor_psd.vtex_c",
+      "outPath": "public/images/items/weapon/capacitor.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_capacitor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/close_quarters.psd",
+      "vpkPath": "panorama/images/items/weapon/close_quarters_psd.vtex_c",
+      "outPath": "public/images/items/weapon/close_quarters.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_close_range"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/crippling_headshot.psd",
+      "vpkPath": "panorama/images/items/weapon/crippling_headshot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/crippling_headshot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_banshee_slugs"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/crushing_fists.psd",
+      "vpkPath": "panorama/images/items/weapon/crushing_fists_psd.vtex_c",
+      "outPath": "public/images/items/weapon/crushing_fists.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_crushing_fists"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/cultist_sacrifice.psd",
+      "vpkPath": "panorama/images/items/weapon/cultist_sacrifice_psd.vtex_c",
+      "outPath": "public/images/items/weapon/cultist_sacrifice.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_non_player_bonus_sacrifice"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/escalating_resilience.psd",
+      "vpkPath": "panorama/images/items/weapon/escalating_resilience_psd.vtex_c",
+      "outPath": "public/images/items/weapon/escalating_resilience.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_reinforcing_casings"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/express_shot.psd",
+      "vpkPath": "panorama/images/items/weapon/express_shot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/express_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_express_shot"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/fleetfoot.psd",
+      "vpkPath": "panorama/images/items/weapon/fleetfoot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/fleetfoot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_fleetfoot_boots"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/frenzy.psd",
+      "vpkPath": "panorama/images/items/weapon/frenzy_psd.vtex_c",
+      "outPath": "public/images/items/weapon/frenzy.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_fervor"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/glass_cannon.psd",
+      "vpkPath": "panorama/images/items/weapon/glass_cannon_psd.vtex_c",
+      "outPath": "public/images/items/weapon/glass_cannon.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_glass_cannon"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/headhunter.psd",
+      "vpkPath": "panorama/images/items/weapon/headhunter_psd.vtex_c",
+      "outPath": "public/images/items/weapon/headhunter.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_headhunter"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/headshot_booster.psd",
+      "vpkPath": "panorama/images/items/weapon/headshot_booster_psd.vtex_c",
+      "outPath": "public/images/items/weapon/headshot_booster.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_headshot_booster"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/heroic_aura.psd",
+      "vpkPath": "panorama/images/items/weapon/heroic_aura_psd.vtex_c",
+      "outPath": "public/images/items/weapon/heroic_aura.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_dps_aura"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/high_velocity_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/high_velocity_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/high_velocity_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_high_velocity_mag"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/hollow_point.psd",
+      "vpkPath": "panorama/images/items/weapon/hollow_point_psd.vtex_c",
+      "outPath": "public/images/items/weapon/hollow_point.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_hollow_point_rounds"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/hunters_aura.psd",
+      "vpkPath": "panorama/images/items/weapon/hunters_aura_psd.vtex_c",
+      "outPath": "public/images/items/weapon/hunters_aura.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_bullet_armor_reduction_aura"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/intensifying_magazine.psd",
+      "vpkPath": "panorama/images/items/weapon/intensifying_magazine_psd.vtex_c",
+      "outPath": "public/images/items/weapon/intensifying_magazine.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_intensifying_clip"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/kinetic_dash.psd",
+      "vpkPath": "panorama/images/items/weapon/kinetic_dash_psd.vtex_c",
+      "outPath": "public/images/items/weapon/kinetic_dash.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_kinetic_sash"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/long_range.psd",
+      "vpkPath": "panorama/images/items/weapon/long_range_psd.vtex_c",
+      "outPath": "public/images/items/weapon/long_range.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_long_range"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/lucky_shot.psd",
+      "vpkPath": "panorama/images/items/weapon/lucky_shot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/lucky_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_critshot"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/melee_charge.psd",
+      "vpkPath": "panorama/images/items/weapon/melee_charge_psd.vtex_c",
+      "outPath": "public/images/items/weapon/melee_charge.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_melee_charge"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/monster_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/monster_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/monster_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_non_player_bonus"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/mystic_shot.psd",
+      "vpkPath": "panorama/images/items/weapon/mystic_shot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/mystic_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_crackshot"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/opening_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/opening_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/opening_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_pristine_emblem"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/point_blank.psd",
+      "vpkPath": "panorama/images/items/weapon/point_blank_psd.vtex_c",
+      "outPath": "public/images/items/weapon/point_blank.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_close_quarter_combat"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/rapid_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/rapid_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/rapid_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rapid_rounds"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/recharging_rounds.psd",
+      "vpkPath": "panorama/images/items/weapon/recharging_rounds_psd.vtex_c",
+      "outPath": "public/images/items/weapon/recharging_rounds.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_rechargingbullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/restorative_shot.psd",
+      "vpkPath": "panorama/images/items/weapon/restorative_shot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/restorative_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_medic_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/ricochet.psd",
+      "vpkPath": "panorama/images/items/weapon/ricochet_psd.vtex_c",
+      "outPath": "public/images/items/weapon/ricochet.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_ricochet"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/shadow_weave.psd",
+      "vpkPath": "panorama/images/items/weapon/shadow_weave_psd.vtex_c",
+      "outPath": "public/images/items/weapon/shadow_weave.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_cloaking_device_active"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/sharp_shooter.psd",
+      "vpkPath": "panorama/images/items/weapon/sharp_shooter_psd.vtex_c",
+      "outPath": "public/images/items/weapon/sharp_shooter.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_sharpshooter"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/silencer.psd",
+      "vpkPath": "panorama/images/items/weapon/silencer_psd.vtex_c",
+      "outPath": "public/images/items/weapon/silencer.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_proc_silence"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/slowing_bullets.psd",
+      "vpkPath": "panorama/images/items/weapon/slowing_bullets_psd.vtex_c",
+      "outPath": "public/images/items/weapon/slowing_bullets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_slowing_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/spell_slinger.psd",
+      "vpkPath": "panorama/images/items/weapon/spell_slinger_psd.vtex_c",
+      "outPath": "public/images/items/weapon/spell_slinger.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_enchanted_holsters"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/spellslinger_headshots.psd",
+      "vpkPath": "panorama/images/items/weapon/spellslinger_headshots_psd.vtex_c",
+      "outPath": "public/images/items/weapon/spellslinger_headshots.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_spellslinger_headshots"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/spirit_shredder_bullets.psd",
+      "vpkPath": "panorama/images/items/weapon/spirit_shredder_bullets_psd.vtex_c",
+      "outPath": "public/images/items/weapon/spirit_shredder_bullets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_tech_defense_shredders"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/spiritual_overflow.psd",
+      "vpkPath": "panorama/images/items/weapon/spiritual_overflow_psd.vtex_c",
+      "outPath": "public/images/items/weapon/spiritual_overflow.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_tech_overflow"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/split_shot.psd",
+      "vpkPath": "panorama/images/items/weapon/split_shot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/split_shot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_split_shot"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/swift_striker.psd",
+      "vpkPath": "panorama/images/items/weapon/swift_striker_psd.vtex_c",
+      "outPath": "public/images/items/weapon/swift_striker.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_blitz_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/tesla_bullets.psd",
+      "vpkPath": "panorama/images/items/weapon/tesla_bullets_psd.vtex_c",
+      "outPath": "public/images/items/weapon/tesla_bullets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_chain_lightning"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/titanic_magazine.psd",
+      "vpkPath": "panorama/images/items/weapon/titanic_magazine_psd.vtex_c",
+      "outPath": "public/images/items/weapon/titanic_magazine.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_titan_round"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/toxic_bullets.psd",
+      "vpkPath": "panorama/images/items/weapon/toxic_bullets_psd.vtex_c",
+      "outPath": "public/images/items/weapon/toxic_bullets.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_toxic_bullets"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/weakening_headshot.psd",
+      "vpkPath": "panorama/images/items/weapon/weakening_headshot_psd.vtex_c",
+      "outPath": "public/images/items/weapon/weakening_headshot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_headshot_booster2"
+      ]
+    },
+    {
+      "ref": "file://{images}/items/weapon/weighted_shots.psd",
+      "vpkPath": "panorama/images/items/weapon/weighted_shots_psd.vtex_c",
+      "outPath": "public/images/items/weapon/weighted_shots.png",
+      "kind": "vtex",
+      "usedBy": [
+        "item:upgrade_weighted_shots"
+      ]
+    },
+    {
+      "ref": "file://{images}/npcs/vanguard_aoe_buff.psd",
+      "vpkPath": "panorama/images/npcs/vanguard_aoe_buff_psd.vtex_c",
+      "outPath": "public/images/npcs/vanguard_aoe_buff.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:vanguard_aoe_buff"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_armor/advanced_armor.psd",
+      "vpkPath": "panorama/images/upgrades/mods_armor/advanced_armor_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_armor/advanced_armor.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_stackingdefense"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_tech/healbane.psd",
+      "vpkPath": "panorama/images/upgrades/mods_tech/healbane_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_tech/healbane.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_trapper_fear",
+        "ability:ability_trapper_fear1",
+        "ability:ability_priest_selfheal"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_tech/return_fire.psd",
+      "vpkPath": "panorama/images/upgrades/mods_tech/return_fire_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_tech/return_fire.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_bigbolt"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_utility/springy_boots.psd",
+      "vpkPath": "panorama/images/upgrades/mods_utility/springy_boots_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_utility/springy_boots.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:operative_umbrella_maneuver"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_utility/zipline_mastery.psd",
+      "vpkPath": "panorama/images/upgrades/mods_utility/zipline_mastery_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_utility/zipline_mastery.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:citadel_ability_zipline_boost"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_weapon/high_velocity_mag.psd",
+      "vpkPath": "panorama/images/upgrades/mods_weapon/high_velocity_mag_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_weapon/high_velocity_mag.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_perched_predator",
+        "ability:ability_rolling_fireball"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_weapon/longshot.psd",
+      "vpkPath": "panorama/images/upgrades/mods_weapon/longshot_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_weapon/longshot.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_target_practice"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/mods_weapon/ricochet.psd",
+      "vpkPath": "panorama/images/upgrades/mods_weapon/ricochet_psd.vtex_c",
+      "outPath": "public/images/upgrades/mods_weapon/ricochet.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_magician_magicbolt_trigger",
+        "ability:ability_skyrunner_flakshot"
+      ]
+    },
+    {
+      "ref": "file://{images}/upgrades/upgrade_shield.psd",
+      "vpkPath": "panorama/images/upgrades/upgrade_shield_psd.vtex_c",
+      "outPath": "public/images/upgrades/upgrade_shield.png",
+      "kind": "vtex",
+      "usedBy": [
+        "ability:ability_priest_antispiritvest"
+      ]
+    }
+  ]
+}

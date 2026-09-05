@@ -1,0 +1,61 @@
+/*
+ * Deadlock 日本語リファレンス カラートークン
+ *
+ * 公式サムネイルから抽出した実際の色を土台にしている。
+ *   ロゴの文字     #FCF0D8  (H40 S86 L92)  → ベージュ系テキスト
+ *   建物のエメラルド #307860  (H160 S43 L33) → アクセント(暗いので明度を上げて使う)
+ *   最暗部          #181818〜#182430        → 背景。青緑にわずかに寄っているのを再現する
+ *
+ * コントラスト比は全て背景 --c-surface に対して検証済み。
+ * 本文用は4.5:1以上、UI要素は3:1以上を満たす。
+ */
+
+:root {
+  /* ---- 背景: ほぼ無彩色だが、わずかに青緑に寄せてサムネイルの空気感に合わせる ---- */
+  --c-bg: #11161a; /* ページ地 */
+  --c-surface: #171e22; /* カード・表 */
+  --c-surface-2: #1d262b; /* ホバー・表の縞 */
+  --c-surface-3: #243036; /* 押下・選択中 */
+  --c-border: #2a363c;
+  --c-border-strong: #3a4a52;
+
+  /* ---- テキスト: ベージュ ---- */
+  --c-text: #f0e7cf; /* 本文            13.7:1 */
+  --c-text-strong: #fcf0d8; /* 見出し(ロゴと同色) 14.9:1 */
+  --c-text-muted: #a79d88; /* 補助・注釈       6.3:1 */
+  --c-text-faint: #6f6a5d; /* 罫線ラベル等(装飾用) */
+
+  /* ---- アクセント: エメラルドグリーン ---- */
+  --c-accent: #3fbf8f; /* リンク・強調      7.3:1 */
+  --c-accent-hover: #6fe0b4; /* ホバー          10.4:1 */
+  --c-accent-dim: #2b8f6b; /* 下線・境界       4.2:1 */
+  --c-accent-bg: rgb(63 191 143 / 0.12); /* 淡い塗り */
+  --c-accent-bg-strong: rgb(63 191 143 / 0.2);
+
+  /* ---- アイテムTYPE: ゲーム内の色分けに合わせる ---- */
+  --c-weapon: #e0a458; /* Weapon   7.7:1 */
+  --c-vitality: #8cc96e; /* Vitality 8.6:1 */
+  --c-spirit: #b58be6; /* Spirit   6.3:1 */
+  --c-weapon-bg: rgb(224 164 88 / 0.12);
+  --c-vitality-bg: rgb(140 201 110 / 0.12);
+  --c-spirit-bg: rgb(181 139 230 / 0.12);
+
+  /* ---- タイポグラフィ ---- */
+  --font-sans:
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Segoe UI",
+    system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Roboto Mono", monospace;
+
+  /* ---- 余白・角丸 ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  color-scheme: dark;
+}

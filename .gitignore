@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+Thumbs.db
+
+# 参照専用の外部リポジトリ。別フォルダにcloneして --gt で指定する
+GameTracking-Deadlock/
+
+# ゲーム本体から取り出した生のローカライズファイル。
+# data/localization.*.json と data/i18n/ja.json に変換済みで、
+# サイトのビルドにも再パースにも中間ファイルは要らないため追跡しない。
+# 取り出し手順は docs/ゲーム本体からの抽出-実施記録.md にある。
+game-localization/
+
+# 作業中に生成した一時ファイル・スクリーンショット・受け渡し用のzip
+Claude outputs/
+_to_delete/
+*.tgz

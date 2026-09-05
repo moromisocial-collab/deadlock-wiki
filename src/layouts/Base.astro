@@ -1,0 +1,173 @@
+---
+import "../styles/global.css";
+import { heroesFile } from "../lib/data.ts";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const nav = [
+  { href: `${base}/heroes/`, label: "ヒーロー" },
+  { href: `${base}/items/`, label: "アイテム" },
+  { href: `${base}/build/`, label: "ビルド" },
+];
+const path = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | Deadlock 日本語リファレンス</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a class="wordmark" href={`${base}/`}>
+          <span class="mark" aria-hidden="true"></span>
+          <span class="name">DEADLOCK</span>
+          <span class="sub">日本語リファレンス</span>
+        </a>
+        <nav>
+          {
+            nav.map((n) => (
+              <a href={n.href} class:list={[{ current: path.startsWith(n.href) }]}>
+                {n.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <p>
+          データ出典: GameTracking-Deadlock (コミット
+          <code>{heroesFile.upstreamCommit.slice(0, 12)}</code>)。数値はゲームの生データから自動抽出しています。
+        </p>
+        <p class="muted">
+          本サイトはファンによる非公式サイトで、Valve Corporation とは関係がなく、許諾も受けていません。
+          『Deadlock』および本サイトが表示するデータ・画像・テキストの著作権は
+          Valve Corporation に帰属します。
+          <a href={`${base}/about/`}>このサイトについて</a>
+        </p>
+      </div>
+    </footer>
+
+    <style>
+      .site-header {
+        position: relative;
+        z-index: 1;
+        border-bottom: 1px solid var(--c-border);
+        background: rgb(17 22 26 / 0.72);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+      }
+      .inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 var(--sp-5);
+      }
+      .site-header .inner {
+        display: flex;
+        align-items: center;
+        gap: var(--sp-6);
+        min-height: 58px;
+      }
+      .wordmark {
+        display: flex;
+        align-items: baseline;
+        gap: var(--sp-2);
+        color: var(--c-text-strong);
+      }
+      .wordmark:hover {
+        text-decoration: none;
+      }
+      /* サムネイルのロゴ(円+スポーク)を簡略化した記号 */
+      .mark {
+        width: 15px;
+        height: 15px;
+        border: 2px solid var(--c-accent);
+        border-radius: 50%;
+        position: relative;
+        align-self: center;
+        box-shadow: 0 0 10px rgb(63 191 143 / 0.45);
+      }
+      .mark::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border-radius: 50%;
+        background: var(--c-accent);
+      }
+      .name {
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+      .sub {
+        font-size: 11px;
+        color: var(--c-text-muted);
+        letter-spacing: 0.08em;
+      }
+      nav {
+        display: flex;
+        gap: var(--sp-5);
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--c-text-muted);
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+      nav a:hover {
+        color: var(--c-text);
+        text-decoration: none;
+      }
+      nav a.current {
+        color: var(--c-accent);
+        border-bottom-color: var(--c-accent);
+      }
+      .site-main {
+        position: relative;
+        z-index: 1;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: var(--sp-6) var(--sp-5) var(--sp-7);
+      }
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid var(--c-border);
+        margin-top: var(--sp-7);
+        padding: var(--sp-5) 0;
+        font-size: 12px;
+        color: var(--c-text-muted);
+      }
+      .site-footer p {
+        margin: 0 0 var(--sp-1);
+      }
+      .site-footer .muted {
+        color: var(--c-text-faint);
+      }
+      @media (max-width: 640px) {
+        .site-header .inner {
+          gap: var(--sp-4);
+        }
+        .sub {
+          display: none;
+        }
+      }
+    </style>
+  </body>
+</html>

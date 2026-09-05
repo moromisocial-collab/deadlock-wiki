@@ -1,0 +1,271 @@
+---
+import Base from "../../layouts/Base.astro";
+import ItemIcon from "../../components/ItemIcon.astro";
+import {
+  shopItems,
+  t,
+  describe,
+  formatProperty,
+  itemsFile,
+  usedIn,
+  SLOT_META,
+  souls,
+} from "../../lib/data.ts";
+
+export function getStaticPaths() {
+  // 実IDは "upgrade_clip_size" のような文字列。連番に振り直さない
+  return shopItems().map((i) => ({ params: { id: i.id }, props: { item: i } }));
+}
+const { item } = Astro.props;
+
+const name = t(item.nameToken, item.id);
+const meta = item.slotType ? SLOT_META[item.slotType] : null;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+/** 常時パッシブ。ビルドの合計ステータスに加算されるのはこれだけ */
+const passives = item.passiveProperties
+  .map((n) => ({ n, p: item.properties[n] }))
+  .filter((x) => x.p)
+  .map((x) => ({ ...formatProperty(x.n, x.p!), raw: x.p! }));
+
+/**
+ * 条件付き効果。ツールチップに載っているプロパティのうち常時パッシブでないもの。
+ * ゲーム側の表示順(m_vecPropertyTooltipSections)をそのまま使う。
+ */
+const AREA_LABEL: Record<string, string> = {
+  Innate: "常時",
+  Passive: "パッシブ",
+  Active: "アクティブ",
+  Spirit: "スピリット",
+};
+const conditional = item.tooltip
+  .map((section) => ({
+    area: AREA_LABEL[section.area.replace(/^EArea_/, "")] ?? section.area.replace(/^EArea_/, ""),
+    rows: [...section.elevatedProperties, ...section.properties]
+      .filter((n) => !item.passiveProperties.includes(n) && item.properties[n])
+      .map((n) => ({ ...formatProperty(n, item.properties[n]!), name: n })),
+  }))
+  .filter((s) => s.rows.length > 0);
+
+const components = item.componentItems
+  .map((c) => itemsFile.items[c])
+  .filter((c) => c !== undefined);
+const parents = usedIn(item.id);
+
+const badge = item.isImbue ? "IMBUE" : item.activation !== "PASSIVE" ? "ACTIVE" : null;
+---
+
+<Base title={name} description={`${name} の効果と数値`}>
+  <a class="back" href={`${base}/items/`}>← アイテム一覧</a>
+
+  <header class="head" style={meta ? `--cat: var(--c-${meta.cssVar}); --cat-bg: var(--c-${meta.cssVar}-bg)` : ""}>
+    <ItemIcon
+      name={name}
+      slotType={item.slotType}
+      tier={item.tier}
+      shopIcon={item.shopIcon}
+      activation={item.activation}
+      isImbue={item.isImbue}
+      size={72}
+    />
+    <div>
+      <h1>{name}</h1>
+      <ul class="facts">
+        {meta && <li class="cat">{meta.label}</li>}
+        <li>ティア{item.tier}</li>
+        <li class="cost">{souls(item.cost)}</li>
+        <li>枠 {item.slotCost}</li>
+        {badge && <li class="badge">{badge}</li>}
+      </ul>
+    </div>
+  </header>
+
+  <p class="desc">{describe(item.descToken, item.properties, "（説明なし）")}</p>
+
+  {passives.length > 0 && (
+    <>
+      <h2>常時パッシブ</h2>
+      <p class="note">装備するだけで常に乗る効果。ビルドの合計ステータスに加算されるのはこれだけです。</p>
+      <ul class="props">
+        {passives.map((p) => (
+          <li><span class="l">{p.label}</span><span class="v">{p.value}</span></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {conditional.length > 0 && (
+    <>
+      <h2>条件付きの効果</h2>
+      <p class="note">発動条件があるため、合計ステータスには加算していません。</p>
+      {conditional.map((s) => (
+        <>
+          <h3 class="area">{s.area}</h3>
+          <ul class="props">
+            {s.rows.map((p) => (
+              <li><span class="l">{p.label}</span><span class="v">{p.value}</span></li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </>
+  )}
+
+  {item.upgrades.length > 0 && (
+    <>
+      <h2>強化</h2>
+      <ol class="upgrades">
+        {item.upgrades.map((step) => (
+          <li>
+            {step.map((u) => (
+              <span class="up">
+                {t(`${u.property}_label`, u.property)}
+                <b>+{u.bonus}{t(`${u.property}_postfix`, "")}</b>
+              </span>
+            ))}
+          </li>
+        ))}
+      </ol>
+    </>
+  )}
+
+  {(components.length > 0 || parents.length > 0) && (
+    <>
+      <h2>関連アイテム</h2>
+      <div class="rel">
+        {components.length > 0 && (
+          <div>
+            <h3 class="area">素材</h3>
+            <ul class="links">
+              {components.map((c) => (
+                <li>
+                  <a href={`${base}/items/${c.id}/`}>
+                    <ItemIcon
+                      name={t(c.nameToken, c.id)}
+                      slotType={c.slotType}
+                      tier={c.tier}
+                      shopIcon={c.shopIcon}
+                      activation={c.activation}
+                      isImbue={c.isImbue}
+                      size={32}
+                    />
+                    <span>{t(c.nameToken, c.id)}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {parents.length > 0 && (
+          <div>
+            <h3 class="area">これを素材にするアイテム</h3>
+            <ul class="links">
+              {parents.map((c) => (
+                <li>
+                  <a href={`${base}/items/${c.id}/`}>
+                    <ItemIcon
+                      name={t(c.nameToken, c.id)}
+                      slotType={c.slotType}
+                      tier={c.tier}
+                      shopIcon={c.shopIcon}
+                      activation={c.activation}
+                      isImbue={c.isImbue}
+                      size={32}
+                    />
+                    <span>{t(c.nameToken, c.id)}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </>
+  )}
+
+  <p class="idline">内部ID <code>{item.id}</code></p>
+
+  <style>
+    .back { font-size: 13px; }
+    .head {
+      --cat: var(--c-accent);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      margin-top: var(--sp-2);
+    }
+    .head h1 { margin: 0; }
+    .facts {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+      padding: 0;
+      margin: var(--sp-2) 0 0;
+      font-size: 12px;
+      color: var(--c-text-muted);
+    }
+    .facts li {
+      border: 1px solid var(--c-border-strong);
+      border-radius: 3px;
+      padding: 1px 6px;
+    }
+    .facts .cat { color: var(--cat); border-color: var(--cat); }
+    .facts .cost { font-family: var(--font-mono); color: var(--c-text-strong); }
+    .facts .badge { color: var(--c-text-strong); letter-spacing: 0.06em; font-weight: 700; }
+    .desc {
+      margin: var(--sp-4) 0 0;
+      line-height: 1.7;
+      color: var(--c-text);
+      max-width: 62ch;
+    }
+    .note { font-size: 12px; color: var(--c-text-faint); margin: 0 0 var(--sp-2); }
+    .area {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-text-muted);
+      margin: var(--sp-4) 0 var(--sp-2);
+      border: none;
+      padding: 0;
+    }
+    .props {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0 var(--sp-5);
+    }
+    .props li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--sp-3);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--c-border);
+      font-size: 13px;
+    }
+    .props .l { color: var(--c-text-muted); }
+    .props .v { font-family: var(--font-mono); color: var(--c-text-strong); white-space: nowrap; }
+    .upgrades { padding-left: var(--sp-5); margin: 0; }
+    .upgrades li { padding: 4px 0; font-size: 13px; }
+    .up { color: var(--c-text-muted); margin-right: var(--sp-4); }
+    .up b { font-family: var(--font-mono); color: var(--c-text-strong); margin-left: 5px; }
+    .rel { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sp-5); }
+    .links { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; }
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      padding: 4px 6px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--c-text);
+    }
+    .links a:hover { background: var(--c-surface-2); color: var(--c-text-strong); }
+    .idline { margin-top: var(--sp-6); font-size: 11px; color: var(--c-text-faint); }
+    .idline code { font-family: var(--font-mono); }
+  </style>
+</Base>
