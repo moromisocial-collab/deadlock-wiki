@@ -1,10 +1,13 @@
 ---
 import Base from "../layouts/Base.astro";
 import { releasedHeroes, shopItems, abilitiesFile, localization, heroesFile } from "../lib/data.ts";
+import imageManifest from "../../data/image-manifest.json" with { type: "json" };
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const heroes = releasedHeroes();
 const items = shopItems();
+// image-manifest は「サイトが必要とする画像の対応表」。entries の件数をそのまま出す
+const imageCount = imageManifest.entries.length;
 const stats = [
   { n: heroes.length, label: "ヒーロー", href: `${base}/heroes/` },
   { n: items.length, label: "アイテム", href: `${base}/items/` },
@@ -42,6 +45,12 @@ const stats = [
     }
   </ul>
 
+  <p class="notice">
+    本サイトはファンによる非公式サイトです。『Deadlock』および本サイトが表示する
+    データ・画像・テキストの著作権は Valve Corporation に帰属します。
+    <a href={`${base}/about/`}>このサイトについて</a>
+  </p>
+
   <h2>データについて</h2>
   <div class="scroll-x">
     <table>
@@ -49,10 +58,11 @@ const stats = [
         <tr><th>項目</th><th>内容</th></tr>
       </thead>
       <tbody>
-        <tr><td>出典</td><td>GameTracking-Deadlock（唯一のデータソース）</td></tr>
+        <tr><td>数値の出典</td><td>GameTracking-Deadlock の <code>.vdata</code></td></tr>
         <tr><td>取り込みコミット</td><td><code>{heroesFile.upstreamCommit.slice(0, 12)}</code></td></tr>
+        <tr><td>日本語表記</td><td>ゲーム本体の公式ローカライズをそのまま使用（未収録分のみ英語）</td></tr>
+        <tr><td>アイコン画像</td><td>ゲーム本体から抽出（{imageCount}枚）</td></tr>
         <tr><td>更新方法</td><td>上流の新規コミットを検知して差分のみ再抽出</td></tr>
-        <tr><td>日本語化</td><td>準備中（現在は英語表記で表示しています）</td></tr>
       </tbody>
     </table>
   </div>
@@ -96,6 +106,13 @@ const stats = [
     }
     .stats a .n {
       color: var(--c-accent);
+    }
+    .notice {
+      font-size: 12px;
+      color: var(--c-text-faint);
+      line-height: 1.7;
+      max-width: 62ch;
+      margin: 0 0 var(--sp-5);
     }
     .l {
       display: block;
